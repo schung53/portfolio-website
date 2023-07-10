@@ -14,7 +14,6 @@ function MenuList({ onClick, isMenuOpen }: InferProps<typeof MenuList.propTypes>
         <div className={styles.listItem} onClick={() => handleClick(2)}>Education</div>
         <div className={styles.listItem} onClick={() => handleClick(3)}>Projects</div>
         <div className={styles.listItem} onClick={() => handleClick(4)}>Resume</div>
-        <div className={styles.listItem} onClick={() => handleClick(5)}>Contact</div>
       </div>
     </Slide>
   );

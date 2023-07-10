@@ -1,3 +1,9 @@
+.container {
+  z-index: 0;
+  position: absolute;
+  top: 25vh;
+}
+
 .imageContainer {
   display: grid;
   justify-items: center;

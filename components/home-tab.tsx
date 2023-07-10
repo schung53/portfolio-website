@@ -3,7 +3,7 @@ import styles from './home-tab.module.css'
 
 function HomeTab() {
   return (
-    <span>
+    <span className={styles.container}>
       <div className={styles.imageContainer}>
         <Image 
           src="/name-logo.svg"
