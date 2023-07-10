@@ -10,6 +10,15 @@
   margin-bottom: 10vh;
 }
 
+@media (max-width: 700px) {
+  .imageContainer {
+    display: grid;
+    justify-items: center;
+    margin-bottom: 10vh;
+    margin-top: 20vh;
+  }
+}
+
 .summaryContainer {
   display: grid;
   justify-items: center;
@@ -22,12 +31,38 @@
 }
 
 .burgerMenuLine {
-  width: 100vw;
+  width: 95vw;
+  height: 3vh;
   justify-items: start;
+  z-index: 2;
 }
 
 .burgerMenu {
-  margin-left: 2vw;
+  margin-left: 0.3vw;
   margin-top: 2vw;
-  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .burgerMenu {
+    margin-left: 4vw;
+    margin-top: 4vw;
+  }
+}
+
+.menuContainer {
+  position: absolute;
+  height: 95vh;
+  width: 95vw;
+  display: grid;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .menuContainer {
+    position: absolute;
+    height: 95vh;
+    width: 95vw;
+    display: grid;
+    align-items: start;
+  }
 }

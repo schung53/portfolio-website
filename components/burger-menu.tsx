@@ -1,11 +1,17 @@
-import styles from './burger-menu.module.css'
+import PropTypes, { InferProps } from 'prop-types';
+import styles from './burger-menu.module.css';
+import Image from 'next/image';
 
-import Image from 'next/image'
+function BurgerMenu({ onClick }: InferProps<typeof BurgerMenu.propTypes>) {
+  const handleClick = (event: any) => {
+    event.stopPropagation();
+    onClick?.();
+  };
 
-function BurgerMenu() {
   return (
-    <div>
+    <div onClick={handleClick}>
       <Image 
+        className={styles.button}
         src="/burger-menu.svg"
         alt="Burger menu"
         width={40}
@@ -13,6 +19,10 @@ function BurgerMenu() {
       />
     </div>
   );
+}
+
+BurgerMenu.propTypes = {
+  onClick: PropTypes.func
 }
 
 export default BurgerMenu;

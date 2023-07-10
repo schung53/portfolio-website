@@ -1,14 +1,31 @@
+import { useState } from "react";
 import Image from "next/image";
 import BurgerMenu from "@/components/burger-menu";
 import styles from './index.module.css';
+import MenuList from "@/components/menu-list";
 
 function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleOpen = () => {
+    console.log("open")
+    setIsMenuOpen(true);
+  };
+
+  const handleClose = () => {
+    console.log("close")
+    setIsMenuOpen(false);
+  };
+
   return (
     <main>
-      <div className={styles.container}>
+      <div onClick={handleClose} className={styles.container}>
+        <div className={styles.menuContainer}>
+          {isMenuOpen && <MenuList />}
+        </div>
         <span className={styles.burgerMenuLine}>
           <div className={styles.burgerMenu}>
-            <BurgerMenu />
+            {!isMenuOpen && <BurgerMenu onClick={handleOpen} />}
           </div>
         </span>
         <span className={styles.centerBox}>

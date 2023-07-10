@@ -6,6 +6,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <div>
       <Head>
+        <title>James S. Chung | SWE</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
