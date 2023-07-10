@@ -25,5 +25,4 @@ MenuList.propTypes = {
   isMenuOpen: PropTypes.bool
 }
 
-
 export default MenuList;
