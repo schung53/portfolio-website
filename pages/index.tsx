@@ -8,12 +8,10 @@ function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOpen = () => {
-    console.log("open")
     setIsMenuOpen(true);
   };
 
   const handleClose = () => {
-    console.log("close")
     setIsMenuOpen(false);
   };
 
@@ -21,7 +19,7 @@ function Home() {
     <main>
       <div onClick={handleClose} className={styles.container}>
         <div className={styles.menuContainer}>
-          {isMenuOpen && <MenuList />}
+          <MenuList isMenuOpen={isMenuOpen} />
         </div>
         <span className={styles.burgerMenuLine}>
           <div className={styles.burgerMenu}>
