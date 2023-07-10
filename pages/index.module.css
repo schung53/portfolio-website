@@ -1,8 +1,7 @@
 .container {
   height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 .imageContainer {
@@ -20,4 +19,15 @@
 
 .summaryLine {
   margin-top: 1vh;
+}
+
+.burgerMenuLine {
+  width: 100vw;
+  justify-items: start;
+}
+
+.burgerMenu {
+  margin-left: 2vw;
+  margin-top: 2vw;
+  cursor: pointer;
 }

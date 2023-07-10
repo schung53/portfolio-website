@@ -1,11 +1,17 @@
 import Image from "next/image";
+import BurgerMenu from "@/components/burger-menu";
 import styles from './index.module.css';
 
 function Home() {
   return (
     <main>
       <div className={styles.container}>
-        <div className={styles.centerBox}>
+        <span className={styles.burgerMenuLine}>
+          <div className={styles.burgerMenu}>
+            <BurgerMenu />
+          </div>
+        </span>
+        <span className={styles.centerBox}>
           <div className={styles.imageContainer}>
             <Image 
               src="/name-logo.svg"
@@ -19,7 +25,7 @@ function Home() {
             <span className={styles.summaryLine}>Full-Stack at CharterUP</span>
             <span className={styles.summaryLine}>Canada • USA</span>
           </div>
-        </div>
+        </span>
       </div>
     </main>
   );
