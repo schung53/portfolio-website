@@ -4,6 +4,7 @@ import styles from './index.module.css';
 import MenuList from "@/components/menu-list";
 import HomeTab from "@/components/home-tab";
 import ExperienceTab from "@/components/experience-tab";
+import ContactList from "@/components/contact-list";
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,6 +38,7 @@ function Home() {
       <div onClick={handleClose} className={styles.container}>
         <div className={styles.menuContainer}>
           <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} />
+          <ContactList isMenuOpen={isMenuOpen} />
         </div>
         <span className={styles.burgerMenuLine}>
           <div className={styles.burgerMenu}>
