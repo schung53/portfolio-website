@@ -8,6 +8,7 @@
   display: grid;
   justify-items: center;
   margin-bottom: 10vh;
+  margin-top: 10vh
 }
 
 @media (max-width: 700px) {

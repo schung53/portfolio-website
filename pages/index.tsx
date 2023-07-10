@@ -8,12 +8,10 @@ function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleOpen = () => {
-    console.log("open")
     setIsMenuOpen(true);
   };
 
   const handleClose = () => {
-    console.log("close")
     setIsMenuOpen(false);
   };
 
