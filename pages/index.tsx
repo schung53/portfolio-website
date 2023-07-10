@@ -1,11 +1,13 @@
 import { useState } from "react";
-import Image from "next/image";
 import BurgerMenu from "@/components/burger-menu";
 import styles from './index.module.css';
 import MenuList from "@/components/menu-list";
+import HomeTab from "@/components/home-tab";
+import ExperienceTab from "@/components/experience-tab";
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [tabId, setTabId] = useState(0);
 
   const handleOpen = () => {
     setIsMenuOpen(true);
@@ -15,32 +17,33 @@ function Home() {
     setIsMenuOpen(false);
   };
 
+  const handleTabClick = (tabId: number) => {
+    return setTabId(tabId)
+  }
+
+  const tabIdToComponent = (tabId: number) => {
+    switch (tabId) {
+      case 0:
+        return <HomeTab />;
+      case 1:
+        return <ExperienceTab />;
+      default:
+        return <HomeTab />;
+    }
+  }
+
   return (
     <main>
       <div onClick={handleClose} className={styles.container}>
         <div className={styles.menuContainer}>
-          <MenuList isMenuOpen={isMenuOpen} />
+          <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} />
         </div>
         <span className={styles.burgerMenuLine}>
           <div className={styles.burgerMenu}>
             {!isMenuOpen && <BurgerMenu onClick={handleOpen} />}
           </div>
         </span>
-        <span className={styles.centerBox}>
-          <div className={styles.imageContainer}>
-            <Image 
-              src="/name-logo.svg"
-              alt="James S. Chung"
-              width={150}
-              height={150}
-            />
-          </div>
-          <div className={styles.summaryContainer}>
-            <span>Software Engineer</span>
-            <span className={styles.summaryLine}>Full-Stack at CharterUP</span>
-            <span className={styles.summaryLine}>Canada • USA</span>
-          </div>
-        </span>
+        {tabIdToComponent(tabId)}
       </div>
     </main>
   );

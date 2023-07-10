@@ -1,7 +1,7 @@
 .listContainer {
   font-family: 'Lovelo';
   font-size: 2.75vh;
-  width: 25vw;
+  width: 10vw;
   height: 30vh;
   position: absolute;
   z-index: 1;
@@ -10,4 +10,5 @@
 
 .listItem {
   margin-top: 4vh;
+  cursor: pointer;
 }

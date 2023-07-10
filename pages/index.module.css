@@ -4,33 +4,6 @@
   justify-items: center;
 }
 
-.imageContainer {
-  display: grid;
-  justify-items: center;
-  margin-bottom: 10vh;
-  margin-top: 10vh
-}
-
-@media (max-width: 700px) {
-  .imageContainer {
-    display: grid;
-    justify-items: center;
-    margin-bottom: 10vh;
-    margin-top: 20vh;
-  }
-}
-
-.summaryContainer {
-  display: grid;
-  justify-items: center;
-  font-family: 'Lovelo';
-  font-size: 2.5vh;
-}
-
-.summaryLine {
-  margin-top: 1vh;
-}
-
 .burgerMenuLine {
   width: 95vw;
   height: 3vh;
