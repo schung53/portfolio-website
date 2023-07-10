@@ -1,3 +1,10 @@
 body {
   background-color: #F0EAD6;
 }
+
+@font-face {
+  font-family: 'Lovelo';
+  src: url('./fonts/lovelo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

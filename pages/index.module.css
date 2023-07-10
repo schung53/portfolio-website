@@ -1,3 +1,23 @@
-.main {
-  background-color: #F0EAD6;
+.container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 10vh;
+}
+
+.summaryContainer {
+  display: grid;
+  justify-items: center;
+  font-family: 'Lovelo';
+  font-size: 2.5vh;
+}
+
+.summaryLine {
+  margin-top: 1vh;
 }
