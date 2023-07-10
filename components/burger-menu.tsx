@@ -11,7 +11,7 @@ function BurgerMenu({ onClick, isMenuOpen }: InferProps<typeof BurgerMenu.propTy
 
   return (
     <Fade in={!isMenuOpen!} style={{ transitionDelay: isMenuOpen ? '0ms' : '300ms' }}>
-      <div onClick={handleClick}>
+      <div onClick={handleClick} className={styles.container}>
         <Image
           className={styles.image}
           src="/burger-menu.svg"

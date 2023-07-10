@@ -42,7 +42,8 @@ function Home() {
         </div>
         <span className={styles.burgerMenuLine}>
           <div className={styles.burgerMenu}>
-            {!isMenuOpen && <BurgerMenu onClick={handleOpen} />}
+            {!isMenuOpen && <BurgerMenu onClick={handleOpen} />
+            }
           </div>
         </span>
         {tabIdToComponent(tabId)}
