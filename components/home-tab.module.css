@@ -1,7 +1,10 @@
 .container {
   z-index: 0;
+  width: 95vw;
   position: absolute;
   top: 25vh;
+  display: grid;
+  justify-items: center;
 }
 
 .imageContainer {
@@ -16,7 +19,7 @@
     display: grid;
     justify-items: center;
     margin-bottom: 10vh;
-    margin-top: 20vh;
+    margin-top: 15vh;
   }
 }
 
