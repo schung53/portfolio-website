@@ -6,7 +6,7 @@
 
 .burgerMenuLine {
   width: 95vw;
-  height: 3vh;
+  min-height: 3vh;
   justify-items: start;
   z-index: 2;
 }
