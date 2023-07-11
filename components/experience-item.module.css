@@ -7,8 +7,9 @@
   border-radius: 3vh;
   font-family: 'Lovelo';
   font-size: 5vh;
-  display: flex;
+  display: grid;
   justify-items: start;
+  align-items: center;
   margin-top: 5vh;
   cursor: pointer;
 }
@@ -23,8 +24,9 @@
     border-radius: 2vh;
     font-family: 'Lovelo';
     font-size: 5vh;
-    display: flex;
+    display: grid;
     justify-items: start;
+    align-items: center;
     margin-top: 5vh;
   }
 }
@@ -32,4 +34,32 @@
 .title {
   font-size: 3.5vh;
   margin-left: 2vw;
+}
+
+.infoLine {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  font-size: 2vh;
+  margin-top: -3vh;
+  margin-left: 2vw;
+}
+
+@media (max-width: 700px) {
+  .infoLine {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    font-size: 1.75vh;
+    margin-top: -2.5vh;
+  }
+}
+
+.dashedLine {
+  height: 0vh;
+  width: 13vw;
+  border-style: dashed;
+  border-width: 0.3vh;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
 }
