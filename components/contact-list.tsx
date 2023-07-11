@@ -27,7 +27,7 @@ function ContactList({ isMenuOpen }: InferProps<typeof ContactList.propTypes>) {
         <span>
           <Image
             className={styles.image}
-            src="/github-logo.svg"
+            src="/github-logo-w.svg"
             alt="GitHub logo"
             width={50}
             height={50}
@@ -37,7 +37,7 @@ function ContactList({ isMenuOpen }: InferProps<typeof ContactList.propTypes>) {
         <span>
           <Image
             className={styles.image}
-            src="/linkedin-logo.svg"
+            src="/linkedin-logo-w.svg"
             alt="LinkedIn logo"
             width={50}
             height={50}
@@ -47,7 +47,7 @@ function ContactList({ isMenuOpen }: InferProps<typeof ContactList.propTypes>) {
         <span>
           <Image
             className={styles.image}
-            src="/email-logo.svg"
+            src="/email-logo-w.svg"
             alt="Email logo"
             width={50}
             height={50}
