@@ -6,7 +6,6 @@ import HomeTab from "@/components/home-tab";
 import ExperienceTab from "@/components/experience-tab";
 import ContactList from "@/components/contact-list";
 import EducationTab from "@/components/education-tab";
-import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from "@/components/scroll-to-top";
 
 function Home() {
@@ -39,24 +38,22 @@ function Home() {
   }
 
   return (
-    <BrowserRouter>
-      <ScrollToTop>
-        <main>
-          <div onClick={handleClose} className={styles.container}>
-            <div className={styles.menuContainer}>
-              <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} />
-              <ContactList isMenuOpen={isMenuOpen} />
-            </div>
-            <span className={styles.burgerMenuLine}>
-              <div className={styles.burgerMenu}>
-                {!isMenuOpen && <BurgerMenu onClick={handleOpen} />}
-              </div>
-            </span>
-            {tabIdToComponent(tabId)}
+    <ScrollToTop>
+      <main>
+        <div onClick={handleClose} className={styles.container}>
+          <div className={styles.menuContainer}>
+            <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} />
+            <ContactList isMenuOpen={isMenuOpen} />
           </div>
-        </main>
-      </ScrollToTop>
-    </BrowserRouter>
+          <span className={styles.burgerMenuLine}>
+            <div className={styles.burgerMenu}>
+              {!isMenuOpen && <BurgerMenu onClick={handleOpen} />}
+            </div>
+          </span>
+          {tabIdToComponent(tabId)}
+        </div>
+      </main>
+    </ScrollToTop>
   );
 }
 
