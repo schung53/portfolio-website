@@ -1,0 +1,23 @@
+.container {
+  width: 95vw;
+  z-index: 0;
+  display: grid;
+  justify-items: center;
+  position: absolute;
+  align-items: center;
+  top: 20vh;
+  padding-bottom: 10vh;
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 95vw;
+    z-index: 0;
+    display: grid;
+    justify-items: center;
+    position: absolute;
+    align-items: center;
+    top: 35vh;
+    padding-bottom: 10vh;
+  }
+}

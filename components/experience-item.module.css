@@ -1,0 +1,35 @@
+.itemContainer {
+  width: 50vw;
+  height: 25vh;
+  background-color: #FDB92E;
+  border-style: solid;
+  border-width: 0.8vh;
+  border-radius: 3vh;
+  font-family: 'Lovelo';
+  font-size: 5vh;
+  display: flex;
+  justify-items: start;
+  margin-top: 5vh;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .itemContainer {
+    width: 80vw;
+    height: 25vh;
+    background-color: #FDB92E;
+    border-style: solid;
+    border-width: 0.7vh;
+    border-radius: 2vh;
+    font-family: 'Lovelo';
+    font-size: 5vh;
+    display: flex;
+    justify-items: start;
+    margin-top: 5vh;
+  }
+}
+
+.title {
+  font-size: 3.5vh;
+  margin-left: 2vw;
+}

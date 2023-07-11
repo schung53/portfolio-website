@@ -1,0 +1,30 @@
+[
+  {
+    "company": "CharterUP",
+    "title": "Software Engineer",
+    "description": "delivering robust production code  for a realtime charter bus marketplace that brokers over $150m in trip reservations per year.",
+    "location": "Austin, TX (Remote)",
+    "date": "Apr 2023 - Present"
+  },
+  {
+    "company": "HubSpot",
+    "title": "Software Engineer Intern",
+    "description": "developed features for Hubspot's custom report builder, such as customizable formatting for charts, to enable users to better visualize their data throughout the crm platform.",
+    "location": "Boston, MA",
+    "date": "Jun 2022 - Aug 2022"
+  },
+  {
+    "company": "Later",
+    "title": "Software Engineer Intern",
+    "description": "delivered ui augmentations and features such as event-tracking for later's facebook and twitter analytics pages to enable users to track metrics such as post-level engagement and audience demographics.",
+    "location": "Vancouver, BC",
+    "date": "Sept 2021 - Dec 2021"
+  },
+  {
+    "company": "SAP",
+    "title": "Software Engineer Intern",
+    "description": "developed and enhanced jobs in sap concur's entity management system, which controls the lifecycle of the corporate entities behind 50m+ end users.",
+    "location": "Vancouver, BC",
+    "date": "Sept 2020 - Apr 2021"
+  }
+]
