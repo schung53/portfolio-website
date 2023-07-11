@@ -27,6 +27,6 @@ function BurgerMenu({ onClick, isMenuOpen }: InferProps<typeof BurgerMenu.propTy
 BurgerMenu.propTypes = {
   onClick: PropTypes.func,
   isMenuOpen: PropTypes.bool
-}
+};
 
 export default BurgerMenu;

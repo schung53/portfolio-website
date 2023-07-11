@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './experience-item.module.css'
+import styles from './experience-item.module.css';
 
 const differentStyleIndices = [0, 3];
 
@@ -16,7 +16,7 @@ function ExperienceItem({ item, index }: any) {
         {stackItem}
       </div>
     );
-  }
+  };
 
   return (
     <div className={styles.itemContainer} onClick={handleClick}>

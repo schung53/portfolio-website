@@ -1,5 +1,5 @@
 import PropTypes, { InferProps } from 'prop-types';
-import styles from './menu-list.module.css'
+import styles from './menu-list.module.css';
 import Slide from '@mui/material/Slide';
 
 function MenuList({ onClick, isMenuOpen }: InferProps<typeof MenuList.propTypes>) {
@@ -23,6 +23,6 @@ function MenuList({ onClick, isMenuOpen }: InferProps<typeof MenuList.propTypes>
 MenuList.propTypes = {
   onClick: PropTypes.func,
   isMenuOpen: PropTypes.bool
-}
+};
 
 export default MenuList;

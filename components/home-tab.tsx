@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from './home-tab.module.css'
+import styles from './home-tab.module.css';
 
 function HomeTab() {
   return (

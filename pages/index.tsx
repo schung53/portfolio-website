@@ -22,7 +22,7 @@ function Home() {
 
   const handleTabClick = (tabId: number) => {
     return setTabId(tabId)
-  }
+  };
 
   const tabIdToComponent = (tabId: number) => {
     switch (tabId) {
@@ -35,7 +35,7 @@ function Home() {
       default:
         return <HomeTab />;
     }
-  }
+  };
 
   return (
     <ScrollToTop>

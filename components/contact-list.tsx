@@ -62,6 +62,6 @@ function ContactList({ isMenuOpen }: InferProps<typeof ContactList.propTypes>) {
 
 ContactList.propTypes = {
   isMenuOpen: PropTypes.bool
-}
+};
 
 export default ContactList;

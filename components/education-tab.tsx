@@ -1,6 +1,6 @@
 import EducationItem from './education-item';
 import styles from './education-tab.module.css';
-import data from '../data/education.json'
+import data from '../data/education.json';
 
 function EducationTab() {
   return (
