@@ -9,6 +9,7 @@
   font-size: 5vh;
   display: flex;
   justify-items: start;
+  margin-top: 5vh;
 }
 
 .degreeShorthand {
@@ -26,7 +27,7 @@
 }
 
 .university {
-  font-size: 3.5vh;
+  font-size: 3.2vh;
 }
 
 .degree {
@@ -44,7 +45,7 @@
 
 .dashedLine {
   height: 0vh;
-  width: 10vw;
+  width: 13vw;
   border-style: dashed;
   border-width: 0.3vh;
   margin-left: 1vw;

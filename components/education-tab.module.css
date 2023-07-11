@@ -1,7 +1,9 @@
 .container {
+  width: 95vw;
   z-index: 0;
   display: grid;
   justify-items: center;
   position: absolute;
-  top: 25vh;
+  align-items: center;
+  top: 15vh;
 }

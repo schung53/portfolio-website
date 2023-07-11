@@ -1,0 +1,16 @@
+[
+  {
+    "university": "University of British Columbia",
+    "degreeShorthand": "B.C.S.",
+    "degree": "Bachelor of Computer Science",
+    "date": "2019 - 2023",
+    "location": "Vancouver, BC"
+  },
+  {
+    "university": "Johns Hopkins University",
+    "degreeShorthand": "B.A.",
+    "degree": "Bachelor of Arts in Chemistry",
+    "date": "2013 - 2017",
+    "location": "Baltimore, MD"
+  }
+]
