@@ -5,6 +5,7 @@ import MenuList from "@/components/menu-list";
 import HomeTab from "@/components/home-tab";
 import ExperienceTab from "@/components/experience-tab";
 import ContactList from "@/components/contact-list";
+import EducationTab from "@/components/education-tab";
 
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +29,8 @@ function Home() {
         return <HomeTab />;
       case 1:
         return <ExperienceTab />;
+      case 2:
+        return <EducationTab />;
       default:
         return <HomeTab />;
     }

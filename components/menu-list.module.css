@@ -6,7 +6,7 @@
   position: absolute;
   z-index: 1;
   margin-left: 2vw;
-  margin-top: 5vh;
+  margin-top: 2vh;
 }
 
 @media (max-width: 700px) {
@@ -24,6 +24,9 @@
 
 
 .listItem {
-  margin-top: 4vh;
+  margin-top: 1vh;
   cursor: pointer;
+  height: 6vh;
+  display: flex;
+  align-items: center;
 }
