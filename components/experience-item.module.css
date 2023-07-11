@@ -37,8 +37,9 @@
 }
 
 .infoLine {
+  width: 50vw;
   display: flex;
-  justify-items: start;
+  justify-items: space-between;
   align-items: center;
   font-size: 2vh;
   margin-top: -3vh;
@@ -57,7 +58,7 @@
 
 .dashedLine {
   height: 0vh;
-  width: 13vw;
+  width: 20vw;
   border-style: dashed;
   border-width: 0.3vh;
   margin-left: 1.5vw;
