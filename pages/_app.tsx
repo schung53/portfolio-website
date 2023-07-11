@@ -8,7 +8,7 @@ function App({ Component, pageProps }: AppProps) {
       <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       <Head>
         <title>James S. Chung | SWE</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/name-logo.svg" />
       </Head>
       <Component {...pageProps} />
     </div>
