@@ -5,7 +5,8 @@
     "description": "delivering robust production code  for a realtime charter bus marketplace that brokers over $150m in trip reservations per year.",
     "location": "Austin, TX (Remote)",
     "date": "Apr 2023 - Present",
-    "url": "https://www.charterup.com"
+    "url": "https://www.charterup.com",
+    "stack": ["Spring Boot", "Vue.js", "MySQL", "AWS"]
   },
   {
     "company": "HubSpot",
@@ -13,7 +14,8 @@
     "description": "developed features for Hubspot's custom report builder, such as customizable formatting for charts, to enable users to better visualize their data throughout the crm platform.",
     "location": "Boston, MA",
     "date": "Jun 2022 - Aug 2022",
-    "url": "https://www.hubspot.com"
+    "url": "https://www.hubspot.com",
+    "stack": ["React.js", "TypeScript"]
   },
   {
     "company": "Later",
@@ -21,7 +23,8 @@
     "description": "delivered ui augmentations and features such as event-tracking for later's facebook and twitter analytics pages to enable users to track metrics such as post-level engagement and audience demographics.",
     "location": "Vancouver, BC",
     "date": "Sept 2021 - Dec 2021",
-    "url": "https://later.com"
+    "url": "https://later.com",
+    "stack": ["Ember.js", "TypeScript", "Sass"]
   },
   {
     "company": "SAP",
@@ -29,6 +32,7 @@
     "description": "developed and enhanced jobs in sap concur's entity management system, which controls the lifecycle of the corporate entities behind 50m+ end users.",
     "location": "Vancouver, BC",
     "date": "Sept 2020 - Apr 2021",
-    "url": "https://www.concur.com"
+    "url": "https://www.concur.com",
+    "stack": ["Spring Boot", "React.js", "MySQL", "AWS"]
   }
 ]
