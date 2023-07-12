@@ -1,9 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import styles from './education-item.module.css';
 
 function EducationItem({ item }: any) {
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const noHover = isOpen ? "no-hover" : ""
 
   useEffect(() => {
     updateMedia();
@@ -11,12 +13,18 @@ function EducationItem({ item }: any) {
     return () => window.removeEventListener("resize", updateMedia);
   });
 
+  const handleClick = () => {
+    setIsOpen((prev) => {
+      return !prev;
+    })
+  };
+
   const updateMedia = () => {
     setIsDesktop(window.innerWidth > 1000)
-  }
+  };
 
   return (
-    <div className={styles.itemContainer}>
+    <div className={styles.itemContainer} onClick={handleClick}>
       <div className={styles.innerContainer}>
         {isDesktop && <div className={styles.degreeShorthand}>
           <p>{item.degreeShorthand}</p>
@@ -32,7 +40,7 @@ function EducationItem({ item }: any) {
         </div>
       </div>
       <span className={styles.iconRow}>
-        <div className={styles.arrowIcon}>
+        <div className={`${styles.arrowIcon} ${noHover}`}>
           <Image
             src="/arrow.svg"
             alt="Arrow"

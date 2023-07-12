@@ -1,5 +1,6 @@
 [
   {
+    "id": "ubc_bcs",
     "university": "University of British Columbia",
     "degreeShorthand": "B.C.S.",
     "degree": "Bachelor of Computer Science",
@@ -7,6 +8,7 @@
     "location": "Vancouver, BC"
   },
   {
+    "id": "jhu_ba",
     "university": "Johns Hopkins University",
     "degreeShorthand": "B.A.",
     "degree": "Bachelor of Arts in Chemistry",

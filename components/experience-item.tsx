@@ -14,7 +14,7 @@ function ExperienceItem({ item, index }: any) {
   const _renderStackItem = (stackItem: string) => {
     return (
       <div key={stackItem} className={styles.stackItem}>
-        {stackItem}
+        <p className={styles.stackLabel}>{stackItem}</p>
       </div>
     );
   };
