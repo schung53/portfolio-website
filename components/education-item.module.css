@@ -52,6 +52,16 @@
   margin-top: 2vh;
 }
 
+@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+  .main {
+    height: 20vh;
+    width: 50vw;
+    margin-top: 2vh;
+    display: grid;
+    justify-items: center;
+  }
+}
+
 @media (max-width: 700px) {
   .main {
     height: 20vh;

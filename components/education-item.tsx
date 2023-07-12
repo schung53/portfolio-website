@@ -32,19 +32,17 @@ function EducationItem({ item, isDesktop }: any) {
         </div>
       </div>
       <div className={courseworkStyles}>
-        {
-            <Fade in={isOpen} timeout={{ enter: 1000, exit: 200 }}>
-              <Grid container className={styles.courseworkContainer} justifyContent="center">
-                {item.coursework.map((course: string) => 
-                  <Grid item key={course} className={styles.course}>
-                    <div className={styles.courseLabel}>
-                      <p>{course}</p>
-                    </div>
-                  </Grid>
-                )}
+        <Fade in={isOpen} timeout={{ enter: 1000, exit: 200 }}>
+          <Grid container className={styles.courseworkContainer} justifyContent="center">
+            {item.coursework.map((course: string) => 
+              <Grid item key={course} className={styles.course}>
+                <div className={styles.courseLabel}>
+                  <p>{course}</p>
+                </div>
               </Grid>
-            </Fade>
-        }
+            )}
+          </Grid>
+        </Fade>
       </div>
       <span className={styles.iconRow}>
         <div className={styles.arrowIcon}>

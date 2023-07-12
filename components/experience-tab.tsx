@@ -13,7 +13,7 @@ function ExperienceTab() {
   });
 
   const updateMedia = () => {
-    setIsDesktop(window.innerWidth > 1000)
+    setIsDesktop(window.innerWidth > 1200)
   };
 
   return (
