@@ -32,7 +32,7 @@ function EducationItem({ item, isDesktop }: any) {
         </div>
       </div>
       <div className={courseworkStyles}>
-        <Fade in={isOpen} timeout={{ enter: 1000, exit: 200 }}>
+        <Fade in={isOpen} timeout={{ enter: 1400, exit: 0 }}>
           <Grid container className={styles.courseworkContainer} justifyContent="center">
             {item.coursework.map((course: string) => 
               <Grid item key={course} className={styles.course}>
