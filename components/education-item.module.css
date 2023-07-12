@@ -220,17 +220,31 @@
 }
 
 @media (min-width: 700px) {
-.course {
-  width: 23vw;
-  height: 5vh;
+  .course {
+    width: 23vw;
+    height: 5vh;
+  }
+
+  .courseLabel {
+    width: 19vw;
+    height: 5vh;
+    display: flex;
+    justify-items: start;
+    align-items: center;
+  }
 }
 
-.courseLabel {
-  width: 19vw;
-  height: 5vh;
-  display: flex;
-  justify-items: start;
-  align-items: center;
-}
+@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+  .course {
+    width: 25vw;
+  }
+
+  .courseLabel {
+    width: 25vw;
+  }
+
+  .courseworkContainer {
+    margin-left: -1vw;
+  }
 }
 

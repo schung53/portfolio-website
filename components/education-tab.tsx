@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import EducationItem from './education-item';
 import styles from './education-tab.module.css';
 import data from '../data/education.json';
+import { MediaType } from './enum';
 
 function EducationTab() {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [mediaType, setMediaType] = useState(MediaType.Desktop);
 
   useEffect(() => {
     updateMedia();
@@ -13,13 +14,21 @@ function EducationTab() {
   });
 
   const updateMedia = () => {
-    setIsDesktop(window.innerWidth > 1200)
+    if (window.innerWidth > 1200) {
+      setMediaType(MediaType.Desktop);
+      return;
+    }
+    if (window.innerWidth > 700) {
+      setMediaType(MediaType.Tablet);
+      return;
+    }
+    setMediaType(MediaType.Mobile);
   };
 
   return (
     <div className={styles.container}>
       {data.map((item, index) => 
-        <EducationItem key={item.degree} item={item} index={index} isDesktop={isDesktop} />)
+        <EducationItem key={item.degree} item={item} index={index} mediaType={mediaType} />)
       }
     </div>
   );

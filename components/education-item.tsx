@@ -2,8 +2,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 import styles from './education-item.module.css';
 import { Fade, Grid } from '@mui/material';
+import { MediaType } from './enum';
 
-function EducationItem({ item, isDesktop }: any) {
+function EducationItem({ item, mediaType }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const courseworkStyles = isOpen ? styles.openContainer : styles.closedContainer;
 
@@ -16,9 +17,10 @@ function EducationItem({ item, isDesktop }: any) {
   return (
     <div className={styles.itemContainer} onClick={handleClick}>
       <div className={styles.innerContainer}>
-        {isDesktop && <div className={styles.degreeShorthand}>
-          <p>{item.degreeShorthand}</p>
-        </div>}
+        {(mediaType === MediaType.Desktop) && 
+          <div className={styles.degreeShorthand}>
+            <p>{item.degreeShorthand}</p>
+          </div>}
         <div className={styles.main}>
           <div>
             <p className={styles.university}>{item.university}</p>
@@ -35,7 +37,7 @@ function EducationItem({ item, isDesktop }: any) {
         <Fade in={isOpen} timeout={{ enter: 1400, exit: 0 }}>
           <Grid container className={styles.courseworkContainer} justifyContent="center">
             {item.coursework.map((course: string) => {
-              return isDesktop ? 
+              return (mediaType !== MediaType.Mobile) ? 
               <Grid item sx={{ paddingTop: 3.3, paddingBottom: 3.3 }} key={course} className={styles.course}>
                 <div className={styles.courseLabel}>
                   <p>{course}</p>
