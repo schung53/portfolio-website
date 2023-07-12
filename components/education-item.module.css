@@ -249,7 +249,7 @@
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (min-width: 700px) and (max-height: 700px) {
   .openContainer {
     min-height: 37vh;
     margin-bottom: 5vh;
