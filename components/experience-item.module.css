@@ -19,16 +19,16 @@
   .itemContainer:hover {
     transform: translate(5px, -5px);
   }
+}
 
-  .itemContainer:hover .linkIcon {
-    transform: translate(5px, -5px);
-  }
+.itemContainer:hover .linkIcon {
+  transform: translate(5px, -5px);
 }
 
 @media (max-width: 700px) {
   .itemContainer {
     width: 80vw;
-    height: 27vh;
+    height: 29vh;
     background-color: #FDB92E;
     border-style: solid;
     border-width: 0.7vh;
@@ -163,6 +163,7 @@
     display: grid;
     justify-items: start;
     align-items: center;
+    margin-left: 1vw;
   }
 
   .title {
@@ -185,15 +186,19 @@
 
   .infoLine {
     width: 80vw;
+    margin-left: 3vw;
+    font-size: 1.6vh;
   }
 
   .descriptionLine {
     width: 75vw;
-    font-size: 1.6vh;
+    font-size: 1.7vh;
+    margin-top: -2.5vh;
+    margin-left: 3vw;
   }
 
   .stackItem {
-    width: 19vw;
+    width: 17vw;
     height: 3.3vh;
     font-size: 1.1vh;
     display: grid;
@@ -206,7 +211,7 @@
   }
 
   .stackLine {
-    margin-top: 0vh;
+    margin-top: -0.5vh;
     width: 80vw;
   }
 }
