@@ -6,6 +6,7 @@ const differentStyleIndices = [0, 3];
 function ExperienceItem({ item, index }: any) {
   const stackLineStyles = differentStyleIndices.some((idx) => idx === index)
     ? styles.bigStackLine : styles.smallStackLine;
+
   const handleClick = () => {
     window.open(item.url, '_blank', 'noreferrer');
   }
