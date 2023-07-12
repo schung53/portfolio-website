@@ -241,10 +241,18 @@
 
   .courseLabel {
     width: 25vw;
+    margin-left: 2vh;
   }
 
   .courseworkContainer {
     margin-left: -1vw;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .openContainer {
+    min-height: 37vh;
+    margin-bottom: 5vh;
   }
 }
 

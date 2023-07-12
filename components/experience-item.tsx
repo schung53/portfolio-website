@@ -10,7 +10,7 @@ function ExperienceItem({ item, mediaType }: any) {
 
   const _renderStackItem = (stackItem: string) => {
     const correctedStackItem = 
-      (mediaType === MediaType.Mobile && stackItem === "Spring Boot") ? "Spring" : stackItem;
+      (mediaType !== MediaType.Desktop && stackItem === "Spring Boot") ? "Spring" : stackItem;
     return (
       <div key={stackItem} className={styles.stackItem}>
         <p className={styles.stackLabel}>{correctedStackItem}</p>
