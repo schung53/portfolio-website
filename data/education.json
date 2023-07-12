@@ -5,7 +5,17 @@
     "degreeShorthand": "B.C.S.",
     "degree": "Bachelor of Computer Science",
     "date": "2019 - 2023",
-    "location": "Vancouver, BC"
+    "location": "Vancouver, BC",
+    "coursework": [
+      "Data Structures and Algorithms",
+      "Internet Computing (Networks)",
+      "Relational Databases",
+      "Software Engineering",
+      "Computer Hardware and Operating Systems",
+      "Algorithms in Bioinformatics",
+      "Statistical Inference",
+      "Intermediate Algorithm Design and Analysis"
+    ]
   },
   {
     "id": "jhu_ba",
@@ -13,6 +23,16 @@
     "degreeShorthand": "B.A.",
     "degree": "Bachelor of Arts in Chemistry",
     "date": "2013 - 2017",
-    "location": "Baltimore, MD"
+    "location": "Baltimore, MD",
+    "coursework": [
+      "Organic Chemistry I & II",
+      "Biochemistry I & II",
+      "Physical Chemistry I & II",
+      "Genetics",
+      "Psychopharmacology",
+      "Protein Engineering and Biochemistry Lab",
+      "Intermediate Organic Lab",
+      "Advanced Inorganic Lab"
+    ]
   }
 ]

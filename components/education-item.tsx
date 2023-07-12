@@ -1,11 +1,12 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './education-item.module.css';
+import { Fade, Grid } from '@mui/material';
 
 function EducationItem({ item }: any) {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const noHover = isOpen ? "no-hover" : ""
+  const courseworkStyles = isOpen ? styles.openContainer : styles.closedContainer;
 
   useEffect(() => {
     updateMedia();
@@ -39,8 +40,22 @@ function EducationItem({ item }: any) {
           </div>
         </div>
       </div>
+      <div className={courseworkStyles}>
+        {
+          isOpen && 
+            <Fade in={isOpen} timeout={{ enter: 1000, exit: 200 }}>
+              <Grid container className={styles.courseworkContainer} justifyContent="center">
+                {item.coursework.map((course: string) => 
+                  <Grid item key={course} className={styles.course}>
+                    <p>{course}</p>
+                  </Grid>
+                )}
+              </Grid>
+            </Fade>
+        }
+      </div>
       <span className={styles.iconRow}>
-        <div className={`${styles.arrowIcon} ${noHover}`}>
+        <div className={styles.arrowIcon}>
           <Image
             src="/arrow.svg"
             alt="Arrow"

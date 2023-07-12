@@ -90,7 +90,7 @@
 .smallStackLine {
   display: flex;
   margin-right: 2vw;
-  margin-top: -1vh;
+  margin-top: -1.5vh;
 }
 
 .bigStackLine {
@@ -112,7 +112,7 @@
 }
 
 .stackLabel {
-  margin-top: 1.5vh;
+  margin-top: 1.4vh;
 }
 
 .dashedLine {
