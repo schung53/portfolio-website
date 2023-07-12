@@ -18,8 +18,8 @@ function ExperienceTab() {
 
   return (
     <div className={styles.container}>
-      {data.map((item, index) => 
-        <ExperienceItem key={item.date} item={item} index={index} isDesktop={isDesktop} />)}
+      {data.map((item) => 
+        <ExperienceItem key={item.date} item={item} isDesktop={isDesktop} />)}
     </div>
   );
 }

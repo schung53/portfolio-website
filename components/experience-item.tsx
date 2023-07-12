@@ -1,11 +1,7 @@
 import Image from 'next/image';
 import styles from './experience-item.module.css';
 
-const differentStyleIndices = [0, 3];
-
-function ExperienceItem({ item, index, isDesktop }: any) {
-  const stackLineStyles = differentStyleIndices.some((idx) => idx === index)
-    ? styles.bigStackLine : styles.smallStackLine;
+function ExperienceItem({ item, isDesktop }: any) {
 
   const handleClick = () => {
     window.open(item.url, '_blank', 'noreferrer');
@@ -51,7 +47,7 @@ function ExperienceItem({ item, index, isDesktop }: any) {
           <p>{item.description}</p>
         </span>
         <span className={styles.stackLine}>
-          <div className={stackLineStyles}>
+          <div className={styles.bigStackLine}>
             {item.stack.map((stackItem: string) => _renderStackItem(stackItem))}
           </div>
         </span>
