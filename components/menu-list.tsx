@@ -17,9 +17,9 @@ function MenuList({ onClick, isMenuOpen }: InferProps<typeof MenuList.propTypes>
 
   return (
     <Slide direction="right" in={isMenuOpen!} mountOnEnter unmountOnExit>
-      <div>
+      <div className={styles.listContainer}>
         {showList && 
-          <div id="menu-list" className={styles.listContainer}>
+          <div id="menu-list">
             <div className={styles.listItem} onClick={() => handleClick(0)}>Home</div>
             <div className={styles.listItem} onClick={() => handleClick(1)}>Experience</div>
             <div className={styles.listItem} onClick={() => handleClick(2)}>Education</div>
