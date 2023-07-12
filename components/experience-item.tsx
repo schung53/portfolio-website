@@ -20,7 +20,7 @@ function ExperienceItem({ item, mediaType }: any) {
     <div className={styles.itemContainer} onClick={handleClick}>
       <div>
         {
-          mediaType !== MediaType.Mobile ? 
+          (mediaType !== MediaType.Mobile) ? 
             <span className={styles.titleLine}>
               <p className={styles.title}>{`${item.title} • ${item.company}`}</p>
               <Image 
@@ -32,15 +32,32 @@ function ExperienceItem({ item, mediaType }: any) {
               />
             </span>
             :
-            <span>
+            <span className={styles.titleLine}>
               <p className={styles.title}>{item.title}</p>
+              <div className={styles.companyLine}>
+                <p className={styles.title}>{item.company}</p>
+                <Image 
+                  className={styles.linkIcon}
+                  src="/link-out-icon.svg"
+                  alt="Link out"
+                  width={10}
+                  height={10}
+              />
+              </div>
             </span>
         }
-        <span className={styles.infoLine}>
-          <p>{item.date}</p>
-          <div className={styles.dashedLine} />
-          <p>{item.location}</p>
-        </span>
+        {
+          (mediaType !== MediaType.Mobile) ? 
+            <span className={styles.infoLine}>
+              <p>{item.date}</p>
+              <div className={styles.dashedLine} />
+              <p>{item.location}</p>
+            </span>
+            :
+            <span className={styles.infoLine}>
+              <p>{`${item.date} • ${item.location}`}</p>
+            </span>
+        }
         <span className={styles.descriptionLine}>
           <p>{item.description}</p>
         </span>
