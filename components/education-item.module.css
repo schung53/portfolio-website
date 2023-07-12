@@ -19,7 +19,7 @@
 @media (max-width: 700px) {
   .itemContainer {
     width: 80vw;
-    height: 20vh;
+    min-height: 23vh;
     background-color: #FDB92E;
     border-style: solid;
     border-width: 0.7vh;
@@ -125,6 +125,13 @@
   height: 30vh;
 }
 
+@media (max-width: 700px) {
+  .openContainer {
+    transition: all 0.5s;
+    height: 50vh;
+  }
+}
+
 .closedContainer {
   transition: all 0.7s;
   height: 0vh;
@@ -138,11 +145,28 @@
   display: grid;
 }
 
+@media (max-width: 700px) {
+  .courseworkContainer {
+    width: 50vw;
+    height: 20vh;
+    font-family: "Lora";
+    font-size: 1.7vh;
+    display: grid;
+    margin-top: -6vh;
+  }
+}
+
 .course {
   width: 20vw;
   height: 3vh;
   padding: 2vh;
-  display: flex;
-  justify-items: start;
-  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .course {
+    width: 80vw;
+    height: 5vh;
+    padding-left: 5vw;
+    padding-top: -1vh;
+  }
 }
