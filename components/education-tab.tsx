@@ -5,7 +5,9 @@ import data from '../data/education.json';
 function EducationTab() {
   return (
     <div className={styles.container}>
-      {data.map((item) => <EducationItem key={item.degree} item={item} />)}
+      {data.map((item, index) => 
+        <EducationItem key={item.degree} item={item} index={index} />)
+      }
     </div>
   );
 }
