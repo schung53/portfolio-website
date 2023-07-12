@@ -17,9 +17,8 @@ function EducationTab({ isMenuOpen }: any) {
   }, [mediaType]);
 
   useEffect(() => {
-    console.log("test")
     updateMenuStyles(isMenuOpen);
-  }, [isMenuOpen, updateMenuStyles])
+  }, [isMenuOpen, updateMenuStyles]);
 
   useEffect(() => {
     updateMedia();

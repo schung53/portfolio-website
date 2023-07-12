@@ -1,15 +1,29 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import ExperienceItem from './experience-item';
 import styles from './experience-tab.module.css';
 import data from '../data/experience.json';
 import { MediaType } from './enum';
 
-function ExperienceTab() {
+function ExperienceTab({ isMenuOpen }: any) {
   const [mediaType, setMediaType] = useState(MediaType.Desktop);
+  const [containerStyles, setContainerStyles] = useState(styles.container);
+
+  const updateMenuStyles = useCallback((isOpen: any) => {
+    if (mediaType !== MediaType.Mobile) {
+      return;
+    }
+    const menuStyles = isOpen ? styles.menuOpenContainer : styles.menuClosedContainer;
+    setContainerStyles(menuStyles);
+  }, [mediaType]);
+
+  useEffect(() => {
+    updateMenuStyles(isMenuOpen);
+  }, [isMenuOpen, updateMenuStyles]);
 
   useEffect(() => {
     updateMedia();
     window.addEventListener("resize", updateMedia);
+    updateMenuStyles(isMenuOpen);
     return () => window.removeEventListener("resize", updateMedia);
   });
 
@@ -26,7 +40,7 @@ function ExperienceTab() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={containerStyles}>
       {data.map((item) => 
         <ExperienceItem key={item.date} item={item} mediaType={mediaType} />)}
     </div>
