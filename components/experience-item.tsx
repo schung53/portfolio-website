@@ -6,7 +6,7 @@ function ExperienceItem({ item, mediaType }: any) {
 
   const handleClick = () => {
     window.open(item.url, '_blank', 'noreferrer');
-  }
+  };
 
   const _renderStackItem = (stackItem: string) => {
     const correctedStackItem = 

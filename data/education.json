@@ -12,9 +12,10 @@
       "Relational Databases",
       "Software Engineering",
       "Computer Hardware and Operating Systems",
-      "Algorithms in Bioinformatics",
-      "Statistical Inference",
-      "Intermediate Algorithm Design and Analysis"
+      "Intermediate Algorithm Design and Analysis",
+      "Calculus III & Linear Algebra",
+      "Statistical Inference"
+      
     ]
   },
   {
@@ -28,10 +29,10 @@
       "Organic Chemistry I & II",
       "Biochemistry I & II",
       "Physical Chemistry I & II",
+      "Physics I & II",
+      "Chemical Chirality",
       "Genetics",
-      "Psychopharmacology",
-      "Protein Engineering and Biochemistry Lab",
-      "Intermediate Organic Lab",
+      "Protein Engineering Lab",
       "Advanced Inorganic Lab"
     ]
   }
