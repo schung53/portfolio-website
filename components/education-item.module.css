@@ -12,8 +12,10 @@
   transition: transform 0.2s ease-in-out;
 }
 
-.itemContainer:hover {
-  transform: translate(5px, -5px);
+@media (min-width: 700px) {
+  .itemContainer:hover {
+    transform: translate(5px, -5px);
+  }
 }
 
 @media (max-width: 700px) {
@@ -64,6 +66,7 @@
 @media (max-width: 700px) {
   .university {
     font-size: 2.75vh;
+    margin-left: 2vw;
   }
 }
 
@@ -76,6 +79,7 @@
   .degree {
     margin-top: -1.5vh;
     font-size: 2vh;
+    margin-left: 2vw;
   }
 }
 
@@ -85,6 +89,7 @@
   align-items: center;
   font-size: 2vh;
   margin-top: -3vh;
+  margin-left: 2vw;
 }
 
 @media (max-width: 700px) {
@@ -112,6 +117,14 @@
   margin-top: -5vh;
 }
 
+@media (max-width: 700px) {
+  .iconRow {
+    display: grid;
+    justify-items: center;
+    margin-top: -3.5vh;
+  }
+}
+
 .arrowIcon {
   transition: transform 0.2s ease-in-out;
 }
@@ -134,7 +147,14 @@
 
 .closedContainer {
   transition: all 0.7s;
-  height: 0vh;
+  height: 0vh
+}
+
+@media (max-width: 700px) {
+  .closedContainer {
+    transition: all 0.5s;
+    height: 4vh;
+  }
 }
 
 .courseworkContainer {
@@ -152,7 +172,8 @@
     font-family: "Lora";
     font-size: 1.7vh;
     display: grid;
-    margin-top: -6vh;
+    margin-top: -4vh;
+    margin-left: -1vw;
   }
 }
 
@@ -168,5 +189,19 @@
     height: 5vh;
     padding-left: 5vw;
     padding-top: -1vh;
+    display: flex;
+    justify-items: start;
+  }
+
+  .courseLabel {
+    width: 75vw;
+    height: 5vh;
+    padding-left: 5vw;
+    padding-top: -1vh;
+    display: flex;
+    justify-items: start;
+    align-items: center;
   }
 }
+
+
