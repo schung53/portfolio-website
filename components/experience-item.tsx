@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import styles from './experience-item.module.css';
+import { MediaType } from './enum';
 
-function ExperienceItem({ item, isDesktop }: any) {
+function ExperienceItem({ item, mediaType }: any) {
 
   const handleClick = () => {
     window.open(item.url, '_blank', 'noreferrer');
@@ -19,7 +20,7 @@ function ExperienceItem({ item, isDesktop }: any) {
     <div className={styles.itemContainer} onClick={handleClick}>
       <div>
         {
-          isDesktop ? 
+          mediaType !== MediaType.Mobile ? 
             <span className={styles.titleLine}>
               <p className={styles.title}>{`${item.title} • ${item.company}`}</p>
               <Image 
@@ -32,10 +33,7 @@ function ExperienceItem({ item, isDesktop }: any) {
             </span>
             :
             <span>
-              <p className={styles.mobileTitle}>{item.title}</p>
-              <div>
-
-              </div>
+              <p className={styles.title}>{item.title}</p>
             </span>
         }
         <span className={styles.infoLine}>
@@ -47,7 +45,7 @@ function ExperienceItem({ item, isDesktop }: any) {
           <p>{item.description}</p>
         </span>
         <span className={styles.stackLine}>
-          <div className={styles.bigStackLine}>
+          <div className={styles.subStackLine}>
             {item.stack.map((stackItem: string) => _renderStackItem(stackItem))}
           </div>
         </span>

@@ -53,9 +53,13 @@
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px)  {
+  .itemContainer {
+    width: 65vw;
+  }
+
   .main {
     height: 20vh;
-    width: 50vw;
+    width: 65vw;
     margin-top: 2vh;
     display: grid;
     justify-items: center;

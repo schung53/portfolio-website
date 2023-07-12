@@ -13,6 +13,12 @@
   margin-top: 10vh;
 }
 
+@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+  .listContainer {
+    right: -4vw;
+  }
+}
+
 @media (max-width: 700px) {
   .listContainer {
     width: 10vw;

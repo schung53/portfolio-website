@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import ExperienceItem from './experience-item';
 import styles from './experience-tab.module.css';
 import data from '../data/experience.json';
+import { MediaType } from './enum';
 
 function ExperienceTab() {
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [mediaType, setMediaType] = useState(MediaType.Desktop);
 
   useEffect(() => {
     updateMedia();
@@ -13,13 +14,21 @@ function ExperienceTab() {
   });
 
   const updateMedia = () => {
-    setIsDesktop(window.innerWidth > 1200)
+    if (window.innerWidth > 1200) {
+      setMediaType(MediaType.Desktop);
+      return;
+    }
+    if (window.innerWidth > 700) {
+      setMediaType(MediaType.Tablet);
+      return;
+    }
+    setMediaType(MediaType.Mobile);
   };
 
   return (
     <div className={styles.container}>
       {data.map((item) => 
-        <ExperienceItem key={item.date} item={item} isDesktop={isDesktop} />)}
+        <ExperienceItem key={item.date} item={item} mediaType={mediaType} />)}
     </div>
   );
 }

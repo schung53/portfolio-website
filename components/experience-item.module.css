@@ -52,10 +52,6 @@
   justify-items: center;
 }
 
-.mobileTitle {
-  font-size: 2vh;
-}
-
 .infoLine {
   width: 50vw;
   display: flex;
@@ -93,13 +89,7 @@
   align-items: center;
 }
 
-.smallStackLine {
-  display: flex;
-  margin-right: 2vw;
-  margin-top: -1.5vh;
-}
-
-.bigStackLine {
+.subStackLine {
   display: flex;
   margin-right: 2vw;
 }
@@ -134,4 +124,42 @@
   margin-top: 4vh;
   margin-left: 0.5vw;
   transition: transform 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1400px)  {
+  .itemContainer {
+    width: 65vw;
+  }
+  .title {
+    font-size: 3vh;
+    margin-left: 2vw;
+  }
+  
+  .titleLine {
+    width: 65vw;
+    display: flex;
+    justify-items: center;
+  }
+
+  .dashedLine {
+    width: 13vw;
+  }
+
+  .infoLine {
+    width: 65vw;
+  }
+
+  .stackLine {
+    width: 65vw;
+  }
+
+  .stackItem {
+    width: 10vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2vh;
+  }
 }
