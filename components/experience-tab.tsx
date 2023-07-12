@@ -1,11 +1,25 @@
+import { useState, useEffect } from 'react';
 import ExperienceItem from './experience-item';
 import styles from './experience-tab.module.css';
 import data from '../data/experience.json';
 
 function ExperienceTab() {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    updateMedia();
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
+  const updateMedia = () => {
+    setIsDesktop(window.innerWidth > 1000)
+  };
+
   return (
     <div className={styles.container}>
-      {data.map((item, index) => <ExperienceItem key={item.date} item={item} index={index} />)}
+      {data.map((item, index) => 
+        <ExperienceItem key={item.date} item={item} index={index} isDesktop={isDesktop} />)}
     </div>
   );
 }

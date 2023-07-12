@@ -1,27 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from './education-item.module.css';
 import { Fade, Grid } from '@mui/material';
 
-function EducationItem({ item }: any) {
-  const [isDesktop, setIsDesktop] = useState(false);
+function EducationItem({ item, isDesktop }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const courseworkStyles = isOpen ? styles.openContainer : styles.closedContainer;
-
-  useEffect(() => {
-    updateMedia();
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
 
   const handleClick = () => {
     setIsOpen((prev) => {
       return !prev;
     })
-  };
-
-  const updateMedia = () => {
-    setIsDesktop(window.innerWidth > 1000)
   };
 
   return (

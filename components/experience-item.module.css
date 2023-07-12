@@ -52,6 +52,10 @@
   justify-items: center;
 }
 
+.mobileTitle {
+  font-size: 2vh;
+}
+
 .infoLine {
   width: 50vw;
   display: flex;
