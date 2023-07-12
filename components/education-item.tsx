@@ -34,13 +34,20 @@ function EducationItem({ item, isDesktop }: any) {
       <div className={courseworkStyles}>
         <Fade in={isOpen} timeout={{ enter: 1400, exit: 0 }}>
           <Grid container className={styles.courseworkContainer} justifyContent="center">
-            {item.coursework.map((course: string) => 
+            {item.coursework.map((course: string) => {
+              return isDesktop ? 
+              <Grid item sx={{ paddingTop: 3.3, paddingBottom: 3.3 }} key={course} className={styles.course}>
+                <div className={styles.courseLabel}>
+                  <p>{course}</p>
+                </div>
+              </Grid>
+              :
               <Grid item key={course} className={styles.course}>
                 <div className={styles.courseLabel}>
                   <p>{course}</p>
                 </div>
               </Grid>
-            )}
+          })}
           </Grid>
         </Fade>
       </div>
