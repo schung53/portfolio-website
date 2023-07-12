@@ -31,7 +31,7 @@ function Home() {
       case 1:
         return <ExperienceTab />;
       case 2:
-        return <EducationTab />;
+        return <EducationTab isMenuOpen={isMenuOpen} />;
       default:
         return <HomeTab />;
     }

@@ -1,15 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import EducationItem from './education-item';
 import styles from './education-tab.module.css';
 import data from '../data/education.json';
 import { MediaType } from './enum';
 
-function EducationTab() {
+function EducationTab({ isMenuOpen }: any) {
   const [mediaType, setMediaType] = useState(MediaType.Desktop);
+  const [containerStyles, setContainerStyles] = useState(styles.container);
+
+  const updateMenuStyles = useCallback((isOpen: any) => {
+    if (mediaType !== MediaType.Mobile) {
+      return;
+    }
+    const menuStyles = isOpen ? styles.menuOpenContainer : styles.menuClosedContainer;
+    setContainerStyles(menuStyles);
+  }, [mediaType]);
+
+  useEffect(() => {
+    console.log("test")
+    updateMenuStyles(isMenuOpen);
+  }, [isMenuOpen, updateMenuStyles])
 
   useEffect(() => {
     updateMedia();
     window.addEventListener("resize", updateMedia);
+    updateMenuStyles(isMenuOpen);
     return () => window.removeEventListener("resize", updateMedia);
   });
 
@@ -26,8 +41,8 @@ function EducationTab() {
   };
 
   return (
-    <div className={styles.container}>
-      {data.map((item, index) => 
+    <div className={containerStyles}>
+      {data.map((item, index) =>
         <EducationItem key={item.degree} item={item} index={index} mediaType={mediaType} />)
       }
     </div>
