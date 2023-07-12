@@ -22,11 +22,19 @@
   }
 }
 
-
 .listItem {
   margin-top: 1vh;
   cursor: pointer;
   height: 6vh;
   display: flex;
   align-items: center;
+}
+
+.listItemInvisible {
+  margin-top: 1vh;
+  cursor: pointer;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  color: transparent
 }
