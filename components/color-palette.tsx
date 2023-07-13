@@ -10,7 +10,7 @@ function ColorPalette({ isMenuOpen, onClick }: any) {
   };
 
   return (
-    <Slide direction="up" in={isMenuOpen!} mountOnEnter unmountOnExit>
+    <Slide direction="down" in={isMenuOpen!} mountOnEnter unmountOnExit>
       <span className={styles.container}>
         <div className={styles.subContainer}>
           {colors.map((color) => {

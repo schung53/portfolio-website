@@ -30,7 +30,7 @@ function Home() {
   const tabIdToComponent = (tabId: number) => {
     switch (tabId) {
       case 0:
-        return <HomeTab />;
+        return <HomeTab color={themeColor} />;
       case 1:
         return <ExperienceTab isMenuOpen={isMenuOpen} color={themeColor} />;
       case 2:

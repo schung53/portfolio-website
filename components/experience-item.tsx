@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './experience-item.module.css';
 import { MediaType } from './enum';
 
-function ExperienceItem({ item, mediaType }: any) {
+function ExperienceItem({ item, mediaType, color }: any) {
 
   const handleClick = () => {
     window.open(item.url, '_blank', 'noreferrer');
@@ -19,7 +19,7 @@ function ExperienceItem({ item, mediaType }: any) {
   };
 
   return (
-    <div className={styles.itemContainer} onClick={handleClick}>
+    <div className={styles.itemContainer} style={{ backgroundColor: color }} onClick={handleClick}>
       <div>
         {
           (mediaType !== MediaType.Mobile) ? 

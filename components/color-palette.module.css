@@ -2,7 +2,7 @@
   display: grid;
   justify-items: center;
   position: absolute;
-  top: 87vh;
+  top: 3vh;
   width: 95vw;
   z-index: 1;
 }

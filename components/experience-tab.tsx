@@ -4,7 +4,7 @@ import styles from './experience-tab.module.css';
 import data from '../data/experience.json';
 import { MediaType } from './enum';
 
-function ExperienceTab({ isMenuOpen }: any) {
+function ExperienceTab({ isMenuOpen, color }: any) {
   const [mediaType, setMediaType] = useState(MediaType.Desktop);
   const [containerStyles, setContainerStyles] = useState(styles.container);
 
@@ -42,7 +42,7 @@ function ExperienceTab({ isMenuOpen }: any) {
   return (
     <div className={containerStyles}>
       {data.map((item) => 
-        <ExperienceItem key={item.date} item={item} mediaType={mediaType} />)}
+        <ExperienceItem key={item.date} item={item} mediaType={mediaType} color={color} />)}
     </div>
   );
 }
