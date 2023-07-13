@@ -56,7 +56,7 @@ function EducationItem({ item, mediaType }: any) {
       <span className={styles.iconRow}>
         <div className={styles.arrowIcon}>
           <Image
-            src="/arrow.svg"
+            src="/arrow-icon.svg"
             alt="Arrow"
             width={30}
             height={30}
