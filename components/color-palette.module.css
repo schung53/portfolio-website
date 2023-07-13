@@ -1,20 +1,30 @@
 .container {
   display: grid;
-  justify-items: center;
   position: absolute;
-  top: 3vh;
-  width: 95vw;
+  top: 31vh;
+  right: 5vw;
   z-index: 1;
 }
 
 @media only screen and (max-width: 700px) {
   .container {
     top: 1vh;
+    right: 18vw;
+  }
+
+  .subContainer {
+    display: grid;
+    justify-items: none;
+  }
+
+  .colorBox {
+    width: 3vh;
+    height: 3vh;
   }
 }
 
 .subContainer {
-  display: flex;
+  display: grid;
   justify-items: center;
   position: absolute;
 }

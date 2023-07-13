@@ -10,7 +10,7 @@ function ColorPalette({ isMenuOpen, onClick, isHidden }: any) {
   };
 
   return (
-    <Slide direction="down" in={isMenuOpen!} mountOnEnter unmountOnExit>
+    <Slide direction="left" in={isMenuOpen!} mountOnEnter unmountOnExit>
       <span className={styles.container}>
         {!isHidden && <>
           <div className={styles.subContainer}>
