@@ -1,8 +1,20 @@
 import Image from 'next/image';
 import styles from './experience-item.module.css';
-import { MediaType } from './enum';
+import { MediaType, ThemeColor } from './enum';
+import { useEffect, useState } from 'react';
+
+const whiteTextThemes = [ThemeColor.Red];
 
 function ExperienceItem({ item, mediaType, color }: any) {
+  const [textColor, setTextColor] = useState("#000000")
+
+  useEffect(() => {
+    if (whiteTextThemes.includes(color)) {
+      setTextColor("#FAFAF3");
+    } else {
+      setTextColor("#000000");
+    }
+  }, [color]);
 
   const handleClick = () => {
     window.open(item.url, '_blank', 'noreferrer');
@@ -19,7 +31,7 @@ function ExperienceItem({ item, mediaType, color }: any) {
   };
 
   return (
-    <div className={styles.itemContainer} style={{ backgroundColor: color }} onClick={handleClick}>
+    <div className={styles.itemContainer} style={{ backgroundColor: color, color: textColor }} onClick={handleClick}>
       <div>
         {
           (mediaType !== MediaType.Mobile) ? 

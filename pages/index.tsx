@@ -13,7 +13,7 @@ import { ThemeColor } from "@/components/enum";
 function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [tabId, setTabId] = useState(0);
-  const [themeColor, setThemeColor] = useState(ThemeColor.Red);
+  const [themeColor, setThemeColor] = useState(ThemeColor.Yellow);
 
   const handleOpen = () => {
     setIsMenuOpen(true);
@@ -36,7 +36,7 @@ function Home() {
       case 2:
         return <EducationTab isMenuOpen={isMenuOpen} color={themeColor} />;
       default:
-        return <HomeTab />;
+        return <HomeTab color={themeColor} />;
     }
   };
 

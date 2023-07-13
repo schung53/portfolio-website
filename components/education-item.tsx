@@ -1,12 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './education-item.module.css';
 import { Fade, Grid } from '@mui/material';
-import { MediaType } from './enum';
+import { MediaType, ThemeColor } from './enum';
+
+const whiteTextThemes = [ThemeColor.Red];
 
 function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const courseworkStyles = isOpen ? styles.openContainer : styles.closedContainer;
+  const [textColor, setTextColor] = useState("#000000")
+
+  useEffect(() => {
+    if (whiteTextThemes.includes(color)) {
+      setTextColor("#FAFAF3");
+    } else {
+      setTextColor("#000000");
+    }
+  }, [color]);
 
   const handleClick = () => {
     setIsOpen((prev) => {
@@ -15,7 +26,7 @@ function EducationItem({ item, mediaType, color }: any) {
   };
 
   return (
-    <div className={styles.itemContainer} style={{ backgroundColor: color }} onClick={handleClick}>
+    <div className={styles.itemContainer} style={{ backgroundColor: color, color: textColor }} onClick={handleClick}>
       <div className={styles.innerContainer}>
         {(mediaType === MediaType.Desktop) && 
           <div className={styles.degreeShorthand}>
