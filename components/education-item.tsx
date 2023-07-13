@@ -9,13 +9,16 @@ const whiteTextThemes = [ThemeColor.Red];
 function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const courseworkStyles = isOpen ? styles.openContainer : styles.closedContainer;
-  const [textColor, setTextColor] = useState("#000000")
+  const [textColor, setTextColor] = useState("#000000");
+  const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
   useEffect(() => {
     if (whiteTextThemes.includes(color)) {
       setTextColor("#FAFAF3");
+      setIconFile("/arrow-icon-light.svg");
     } else {
       setTextColor("#000000");
+      setIconFile("/arrow-icon.svg");
     }
   }, [color]);
 
@@ -67,7 +70,7 @@ function EducationItem({ item, mediaType, color }: any) {
       <span className={styles.iconRow}>
         <div className={styles.arrowIcon}>
           <Image
-            src="/arrow-icon.svg"
+            src={iconFile}
             alt="Arrow"
             width={30}
             height={30}

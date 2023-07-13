@@ -7,12 +7,15 @@ const whiteTextThemes = [ThemeColor.Red];
 
 function ExperienceItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000")
+  const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
   useEffect(() => {
     if (whiteTextThemes.includes(color)) {
       setTextColor("#FAFAF3");
+      setIconFile("/link-out-icon-light.svg");
     } else {
       setTextColor("#000000");
+      setIconFile("/link-out-icon.svg");
     }
   }, [color]);
 
@@ -39,7 +42,7 @@ function ExperienceItem({ item, mediaType, color }: any) {
               <p className={styles.title}>{`${item.title} • ${item.company}`}</p>
               <Image 
                 className={styles.linkIcon}
-                src="/link-out-icon.svg"
+                src={iconFile}
                 alt="Link out"
                 width={20}
                 height={20}
@@ -52,7 +55,7 @@ function ExperienceItem({ item, mediaType, color }: any) {
                 <p className={styles.title}>{item.company}</p>
                 <Image 
                   className={styles.linkIcon}
-                  src="/link-out-icon.svg"
+                  src={iconFile}
                   alt="Link out"
                   width={10}
                   height={10}

@@ -7,7 +7,6 @@ import { getLogoFile } from '@/utils/color';
 
 function App({ Component, pageProps }: AppProps) {
   const [themeColor, setThemeColor] = useState(ThemeColor.Yellow);
-
   const favicon = getLogoFile(themeColor);
 
   return (
