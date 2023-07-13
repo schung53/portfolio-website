@@ -14,7 +14,7 @@ function EducationItem({ item, mediaType, color }: any) {
 
   useEffect(() => {
     if (whiteTextThemes.includes(color)) {
-      setTextColor("#FAFAF3");
+      setTextColor("#FADFB5");
       setIconFile("/arrow-icon-light.svg");
     } else {
       setTextColor("#000000");

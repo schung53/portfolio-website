@@ -11,7 +11,7 @@ function ExperienceItem({ item, mediaType, color }: any) {
 
   useEffect(() => {
     if (whiteTextThemes.includes(color)) {
-      setTextColor("#FAFAF3");
+      setTextColor("#FADFB5");
       setIconFile("/link-out-icon-light.svg");
     } else {
       setTextColor("#000000");
