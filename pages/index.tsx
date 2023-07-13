@@ -14,8 +14,10 @@ function Home({ onSet }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [tabId, setTabId] = useState(0);
   const [themeColor, setThemeColor] = useState(ThemeColor.Yellow);
+  const [menuItemClicked, setMenuItemClicked] = useState(false);
 
   const handleOpen = () => {
+    setMenuItemClicked(false);
     setIsMenuOpen(true);
   };
 
@@ -24,10 +26,12 @@ function Home({ onSet }: any) {
   };
 
   const handleTabClick = (tabId: number) => {
+    setMenuItemClicked(true);
     return setTabId(tabId)
   };
 
   const handleSetColor = (color: ThemeColor) => {
+    setMenuItemClicked(true);
     onSet(color);
     setThemeColor(color);
   }
@@ -50,9 +54,9 @@ function Home({ onSet }: any) {
       <main>
         <div onClick={handleClose} className={styles.container}>
           <div className={styles.menuContainer}>
-            <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} />
-            <ContactList isMenuOpen={isMenuOpen} />
-            <ColorPalette isMenuOpen={isMenuOpen} onClick={handleSetColor} />
+            <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} isHidden={menuItemClicked} />
+            <ContactList isMenuOpen={isMenuOpen} isHidden={menuItemClicked} />
+            <ColorPalette isMenuOpen={isMenuOpen} onClick={handleSetColor} isHidden={menuItemClicked} />
           </div>
           <span className={styles.burgerMenuLine}>
             <div className={styles.burgerMenu}>

@@ -3,7 +3,7 @@ import styles from './contact-list.module.css';
 import Image from 'next/image';
 import Slide from '@mui/material/Slide';
 
-function ContactList({ isMenuOpen }: InferProps<typeof ContactList.propTypes>) {
+function ContactList({ isMenuOpen, isHidden }: InferProps<typeof ContactList.propTypes>) {
   const handleClick = (event: any, type: number) => {
     event.stopPropagation();
     switch (type) {
@@ -24,36 +24,38 @@ function ContactList({ isMenuOpen }: InferProps<typeof ContactList.propTypes>) {
   return (
     <Slide direction="left" in={isMenuOpen!} mountOnEnter unmountOnExit>
       <div className={styles.listContainer}>
-        <span>
-          <Image
-            className={styles.image}
-            src="/github-logo.svg"
-            alt="GitHub logo"
-            width={50}
-            height={50}
-            onClick={(event) => handleClick(event, 0)}
-          />
-        </span>
-        <span>
-          <Image
-            className={styles.image}
-            src="/linkedin-logo.svg"
-            alt="LinkedIn logo"
-            width={50}
-            height={50}
-            onClick={(event) => handleClick(event, 1)}
-          />
-        </span>
-        <span>
-          <Image
-            className={styles.image}
-            src="/email-logo.svg"
-            alt="Email logo"
-            width={50}
-            height={50}
-            onClick={(event) => handleClick(event, 2)}
-          />
-        </span>
+        {!isHidden && <>
+          <span>
+            <Image
+              className={styles.image}
+              src="/github-logo.svg"
+              alt="GitHub logo"
+              width={50}
+              height={50}
+              onClick={(event) => handleClick(event, 0)}
+            />
+          </span>
+          <span>
+            <Image
+              className={styles.image}
+              src="/linkedin-logo.svg"
+              alt="LinkedIn logo"
+              width={50}
+              height={50}
+              onClick={(event) => handleClick(event, 1)}
+            />
+          </span>
+          <span>
+            <Image
+              className={styles.image}
+              src="/email-logo.svg"
+              alt="Email logo"
+              width={50}
+              height={50}
+              onClick={(event) => handleClick(event, 2)}
+            />
+          </span>
+        </>}
         
       </div>
     </Slide>
@@ -61,7 +63,8 @@ function ContactList({ isMenuOpen }: InferProps<typeof ContactList.propTypes>) {
 }
 
 ContactList.propTypes = {
-  isMenuOpen: PropTypes.bool
+  isMenuOpen: PropTypes.bool,
+  isHidden: PropTypes.bool
 };
 
 export default ContactList;
