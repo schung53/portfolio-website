@@ -10,7 +10,7 @@ import ScrollToTop from "@/components/scroll-to-top";
 import ColorPalette from "@/components/color-palette";
 import { ThemeColor } from "@/components/enum";
 
-function Home() {
+function Home({ onSet }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [tabId, setTabId] = useState(0);
   const [themeColor, setThemeColor] = useState(ThemeColor.Yellow);
@@ -26,6 +26,11 @@ function Home() {
   const handleTabClick = (tabId: number) => {
     return setTabId(tabId)
   };
+
+  const handleSetColor = (color: ThemeColor) => {
+    onSet(color);
+    setThemeColor(color);
+  }
 
   const tabIdToComponent = (tabId: number) => {
     switch (tabId) {
@@ -47,7 +52,7 @@ function Home() {
           <div className={styles.menuContainer}>
             <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} />
             <ContactList isMenuOpen={isMenuOpen} />
-            <ColorPalette isMenuOpen={isMenuOpen} onClick={setThemeColor} />
+            <ColorPalette isMenuOpen={isMenuOpen} onClick={handleSetColor} />
           </div>
           <span className={styles.burgerMenuLine}>
             <div className={styles.burgerMenu}>

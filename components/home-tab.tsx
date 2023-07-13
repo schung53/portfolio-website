@@ -1,36 +1,14 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from './home-tab.module.css';
-import { ThemeColor } from "./enum";
-import { useEffect, useState } from "react";
+import { getLogoFile } from "@/utils/color";
 
 function HomeTab({ color }: any) {
   const [logoFile, setLogoFile] = useState("/name-logo-red.svg");
 
   useEffect(() => {
-    setLogo(color);
+    setLogoFile(getLogoFile(color));
   }, [color]);
-
-  const setLogo = (color: ThemeColor) => {
-    switch (color) {
-      case ThemeColor.Red:
-        setLogoFile("/name-logo-red.svg");
-        return;
-      case ThemeColor.Pink:
-        setLogoFile("/name-logo-pink.svg");
-        return;
-      case ThemeColor.Yellow:
-        setLogoFile("/name-logo-yellow.svg");
-        return;
-      case ThemeColor.Blue:
-        setLogoFile("/name-logo-blue.svg");
-        return;
-      case ThemeColor.Brown:
-        setLogoFile("/name-logo-brown.svg");
-        return;
-      default:
-        setLogoFile("/name-logo-red.svg");
-    }
-  }
 
   return (
     <span className={styles.container}>
