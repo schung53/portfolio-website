@@ -4,6 +4,7 @@ import '../globals.css';
 import { useState } from 'react';
 import { ThemeColor } from '@/components/enum';
 import { getLogoFile } from '@/utils/color';
+import { Analytics } from '@vercel/analytics/react';
 
 function App({ Component, pageProps }: AppProps) {
   const [themeColor, setThemeColor] = useState(ThemeColor.Brown);
@@ -17,6 +18,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="icon" type="image/svg+xml" href={favicon} />
       </Head>
       <Component {...pageProps} onSet={setThemeColor} />
+      <Analytics />
     </div>
   );
 }
