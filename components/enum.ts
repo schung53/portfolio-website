@@ -10,5 +10,5 @@ export enum ThemeColor {
   Pink = '#EF86A6',
   Yellow = '#FDB92E',
   Blue = '#73CED0',
-  Brown = '#C1A480'
+  Brown = '#8F5E36'
 }

@@ -4,7 +4,7 @@ import styles from './education-item.module.css';
 import { Fade, Grid } from '@mui/material';
 import { MediaType, ThemeColor } from './enum';
 
-const whiteTextThemes = [ThemeColor.Red];
+const whiteTextThemes = [ThemeColor.Red, ThemeColor.Brown];
 
 function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);

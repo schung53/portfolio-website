@@ -34,7 +34,7 @@ function Home({ onSet }: any) {
     setMenuItemClicked(true);
     onSet(color);
     setThemeColor(color);
-  }
+  };
 
   const tabIdToComponent = (tabId: number) => {
     switch (tabId) {
@@ -44,6 +44,10 @@ function Home({ onSet }: any) {
         return <ExperienceTab isMenuOpen={isMenuOpen} color={themeColor} />;
       case 2:
         return <EducationTab isMenuOpen={isMenuOpen} color={themeColor} />;
+      case 3:
+        return <></> // Projects tab.
+      case 4:
+        return <></> // Resume tab.
       default:
         return <HomeTab color={themeColor} />;
     }
