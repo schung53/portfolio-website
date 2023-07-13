@@ -4,7 +4,7 @@ import styles from './education-item.module.css';
 import { Fade, Grid } from '@mui/material';
 import { MediaType } from './enum';
 
-function EducationItem({ item, mediaType }: any) {
+function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const courseworkStyles = isOpen ? styles.openContainer : styles.closedContainer;
 
@@ -15,7 +15,7 @@ function EducationItem({ item, mediaType }: any) {
   };
 
   return (
-    <div className={styles.itemContainer} onClick={handleClick}>
+    <div className={styles.itemContainer} style={{ backgroundColor: color }} onClick={handleClick}>
       <div className={styles.innerContainer}>
         {(mediaType === MediaType.Desktop) && 
           <div className={styles.degreeShorthand}>

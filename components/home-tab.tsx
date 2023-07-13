@@ -14,7 +14,7 @@ function HomeTab() {
       </div>
       <div className={styles.summaryContainer}>
         <span>Software Engineer</span>
-        <span className={styles.summaryLine}>Full-Stack @ CharterUP</span>
+        <span className={styles.summaryLine}>Full-Stack at CharterUP</span>
         <span className={styles.summaryLine}>Canada • USA</span>
       </div>
     </span>

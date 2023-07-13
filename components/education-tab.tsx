@@ -4,7 +4,7 @@ import styles from './education-tab.module.css';
 import data from '../data/education.json';
 import { MediaType } from './enum';
 
-function EducationTab({ isMenuOpen }: any) {
+function EducationTab({ isMenuOpen, color }: any) {
   const [mediaType, setMediaType] = useState(MediaType.Desktop);
   const [containerStyles, setContainerStyles] = useState(styles.container);
 
@@ -42,7 +42,7 @@ function EducationTab({ isMenuOpen }: any) {
   return (
     <div className={containerStyles}>
       {data.map((item, index) =>
-        <EducationItem key={item.degree} item={item} index={index} mediaType={mediaType} />)
+        <EducationItem key={item.degree} item={item} index={index} mediaType={mediaType} color={color} />)
       }
     </div>
   );

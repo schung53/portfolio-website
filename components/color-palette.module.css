@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  justify-items: center;
+  position: absolute;
+  top: 87vh;
+  width: 95vw;
+  z-index: 1;
+}
+
+.subContainer {
+  display: flex;
+  justify-items: center;
+  position: absolute;
+}
+
+.colorBox {
+  width: 5vh;
+  height: 5vh;
+  cursor: pointer;
+  border: solid;
+  border-radius: 1vh;
+  margin: 1vh;
+}
