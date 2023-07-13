@@ -4,7 +4,7 @@ import styles from './home-tab.module.css';
 import { getLogoFile } from "@/utils/color";
 
 function HomeTab({ color }: any) {
-  const [logoFile, setLogoFile] = useState("/name-logo-red.svg");
+  const [logoFile, setLogoFile] = useState("/name-logo-light-blue.svg");
 
   useEffect(() => {
     setLogoFile(getLogoFile(color));

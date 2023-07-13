@@ -25,7 +25,7 @@ function ContactList({ isMenuOpen, isHidden }: InferProps<typeof ContactList.pro
     <Slide direction="left" in={isMenuOpen!} mountOnEnter unmountOnExit>
       <div className={styles.listContainer}>
         {!isHidden && <>
-          <span>
+          <span className={styles.imageContainer}>
             <Image
               className={styles.image}
               src="/github-logo.svg"
@@ -35,7 +35,7 @@ function ContactList({ isMenuOpen, isHidden }: InferProps<typeof ContactList.pro
               onClick={(event) => handleClick(event, 0)}
             />
           </span>
-          <span>
+          <span className={styles.imageContainer}>
             <Image
               className={styles.image}
               src="/linkedin-logo.svg"
@@ -45,7 +45,7 @@ function ContactList({ isMenuOpen, isHidden }: InferProps<typeof ContactList.pro
               onClick={(event) => handleClick(event, 1)}
             />
           </span>
-          <span>
+          <span className={styles.imageContainer}>
             <Image
               className={styles.image}
               src="/email-logo.svg"

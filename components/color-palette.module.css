@@ -1,15 +1,21 @@
 .container {
   display: grid;
   position: absolute;
-  top: 31vh;
+  top: 32.7vh;
   right: 5vw;
   z-index: 1;
 }
 
+@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+  .container {
+    right: 3vw;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .container {
-    top: 1vh;
-    right: 18vw;
+    top: 2.2vh;
+    right: 17vw;
   }
 
   .subContainer {
@@ -18,8 +24,7 @@
   }
 
   .colorBox {
-    width: 3vh;
-    height: 3vh;
+    width: 2vw;
   }
 }
 
@@ -30,10 +35,10 @@
 }
 
 .colorBox {
-  width: 5vh;
-  height: 5vh;
+  width: 3.5vh;
+  height: 3.5vh;
   cursor: pointer;
   border: solid;
   border-radius: 1vh;
-  margin: 1vh;
+  margin: 1.5vh;
 }

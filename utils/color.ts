@@ -2,17 +2,17 @@ import { ThemeColor } from "@/components/enum";
 
 export const getLogoFile = (color: ThemeColor) => {
   switch (color) {
-    case ThemeColor.Red:
-      return "/name-logo-red.svg";
-    case ThemeColor.Pink:
-      return "/name-logo-pink.svg";
-    case ThemeColor.Yellow:
-      return "/name-logo-yellow.svg";
-    case ThemeColor.Blue:
-      return "/name-logo-blue.svg";
+    case ThemeColor.DarkBlue:
+      return "/name-logo-dark-blue.svg";
+    case ThemeColor.LightBlue:
+      return "/name-logo-light-blue.svg";
+    case ThemeColor.Green:
+      return "/name-logo-green.svg";
     case ThemeColor.Brown:
-      return"/name-logo-brown.svg";
+      return "/name-logo-brown.svg";
+    case ThemeColor.Rose:
+      return"/name-logo-rose.svg";
     default:
-      return "/name-logo-red.svg";
+      return "/name-logo-dark-blue.svg";
   }
 };

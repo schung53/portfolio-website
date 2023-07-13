@@ -3,7 +3,7 @@ import styles from './experience-item.module.css';
 import { MediaType, ThemeColor } from './enum';
 import { useEffect, useState } from 'react';
 
-const whiteTextThemes = [ThemeColor.Red, ThemeColor.Brown];
+const whiteTextThemes = [ThemeColor.DarkBlue];
 
 function ExperienceItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000")

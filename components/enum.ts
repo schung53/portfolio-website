@@ -6,9 +6,9 @@ export enum MediaType {
 }
 
 export enum ThemeColor {
-  Red = '#B83143',
-  Pink = '#EF86A6',
-  Yellow = '#FDB92E',
-  Blue = '#73CED0',
-  Brown = '#8F5E36'
+  DarkBlue = '#116A7B',
+  LightBlue = '#C2DEDC',
+  Green = '#BBD6B8',
+  Brown = '#CDC2AE',
+  Rose = '#D5B4B4'
 }

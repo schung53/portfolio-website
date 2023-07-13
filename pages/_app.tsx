@@ -7,7 +7,7 @@ import { getLogoFile } from '@/utils/color';
 import { Analytics } from '@vercel/analytics/react';
 
 function App({ Component, pageProps }: AppProps) {
-  const [themeColor, setThemeColor] = useState(ThemeColor.Brown);
+  const [themeColor, setThemeColor] = useState(ThemeColor.DarkBlue);
   const favicon = getLogoFile(themeColor);
 
   return (

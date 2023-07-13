@@ -13,7 +13,7 @@ import { ThemeColor } from "@/components/enum";
 function Home({ onSet }: any) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [tabId, setTabId] = useState(0);
-  const [themeColor, setThemeColor] = useState(ThemeColor.Brown);
+  const [themeColor, setThemeColor] = useState(ThemeColor.DarkBlue);
   const [menuItemClicked, setMenuItemClicked] = useState(false);
 
   const handleOpen = () => {
