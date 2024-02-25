@@ -3,16 +3,21 @@ import Image from "next/image";
 import styles from './home-tab.module.css';
 import { getLogoFile } from "@/utils/color";
 
-function HomeTab({ color }: any) {
+function HomeTab({ onClick, color }: any) {
   const [logoFile, setLogoFile] = useState("/name-logo-light-blue.svg");
 
   useEffect(() => {
     setLogoFile(getLogoFile(color));
   }, [color]);
 
+  const handleClick = (event: any) => {
+    event.stopPropagation();
+    onClick?.();
+  };
+
   return (
     <span className={styles.container}>
-      <div className={styles.imageContainer}>
+      <div className={styles.imageContainer} onClick={handleClick}>
         <Image 
           src={logoFile}
           alt="James S. Chung"

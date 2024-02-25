@@ -25,6 +25,14 @@ function Home({ onSet }: any) {
     setIsMenuOpen(false);
   };
 
+  const handleMenuClick = () => {
+    if (isMenuOpen) {
+      handleClose();
+    } else {
+      handleOpen();
+    }
+  }
+
   const handleTabClick = (tabId: number) => {
     setMenuItemClicked(true);
     return setTabId(tabId)
@@ -39,7 +47,7 @@ function Home({ onSet }: any) {
   const tabIdToComponent = (tabId: number) => {
     switch (tabId) {
       case 0:
-        return <HomeTab color={themeColor} />;
+        return <HomeTab color={themeColor} onClick={handleMenuClick} />;
       case 1:
         return <ExperienceTab isMenuOpen={isMenuOpen} color={themeColor} />;
       case 2:
@@ -49,7 +57,7 @@ function Home({ onSet }: any) {
       case 4:
         return <></> // Resume tab.
       default:
-        return <HomeTab color={themeColor} />;
+        return <HomeTab color={themeColor} onClick={handleMenuClick} />;
     }
   };
 
