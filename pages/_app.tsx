@@ -14,7 +14,7 @@ function App({ Component, pageProps }: AppProps) {
     <div>
       <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       <Head>
-        <title>James S. Chung - Software Engineer</title>
+        <title>James S. Chung • Software Engineer</title>
         <link rel="icon" type="image/svg+xml" href={favicon} />
       </Head>
       <Component {...pageProps} onSet={setThemeColor} />
