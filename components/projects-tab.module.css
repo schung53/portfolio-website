@@ -1,0 +1,36 @@
+.container {
+  width: 95vw;
+  z-index: 0;
+  display: grid;
+  justify-items: center;
+  position: absolute;
+  align-items: center;
+  top: 15vh;
+  padding-bottom: 10vh;
+}
+
+@media (max-width: 700px) {
+  .menuOpenContainer {
+    width: 95vw;
+    z-index: 0;
+    display: grid;
+    justify-items: center;
+    position: absolute;
+    align-items: center;
+    top: 40vh;
+    padding-bottom: 10vh;
+    transition: all 80ms ease-in-out;
+  }
+
+  .menuClosedContainer {
+    width: 95vw;
+    z-index: 0;
+    display: grid;
+    justify-items: center;
+    position: absolute;
+    align-items: center;
+    top: 10vh;
+    padding-bottom: 10vh;
+    transition: all 0.8s ease-in-out;
+  }
+}
