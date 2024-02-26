@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  position: absolute;
+  position: fixed;
   top: 33.2vh;
   right: 5vw;
   z-index: 1;
