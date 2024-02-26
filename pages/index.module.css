@@ -7,12 +7,14 @@
 .burgerMenuLine {
   width: 95vw;
   justify-items: start;
-  z-index: 0;
+  z-index: 1;
+  position: fixed;
 }
 
 .burgerMenu {
   margin-left: 0.3vw;
   margin-top: 2vw;
+  position: fixed;
 }
 
 @media (max-width: 700px) {
