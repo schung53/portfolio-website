@@ -7,6 +7,7 @@ import ExperienceTab from "@/components/experience-tab";
 import ContactList from "@/components/contact-list";
 import EducationTab from "@/components/education-tab";
 import ProjectsTab from "@/components/projects-tab";
+import ResumeTab from "@/components/resume-tab";
 import ScrollToTop from "@/components/scroll-to-top";
 import ColorPalette from "@/components/color-palette";
 import { ThemeColor } from "@/components/enum";
@@ -56,7 +57,7 @@ function Home({ onSet }: any) {
       case 3:
         return <ProjectsTab isMenuOpen={isMenuOpen} color={themeColor} />;
       case 4:
-        return <></> // Resume tab.
+        return <ResumeTab isMenuOpen={isMenuOpen} color={themeColor} />;
       default:
         return <HomeTab color={themeColor} onClick={handleMenuClick} />;
     }
