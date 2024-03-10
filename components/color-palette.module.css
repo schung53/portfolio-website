@@ -1,7 +1,7 @@
 .container {
   display: grid;
   position: fixed;
-  top: 33.2vh;
+  top: 34vh;
   right: 5vw;
   z-index: 1;
 }
