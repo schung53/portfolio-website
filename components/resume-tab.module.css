@@ -1,12 +1,22 @@
 .pdfContainer {
   position: absolute;
-  top: 20vh;
+  top: 15vh;
 }
 
 .pageContainer {
   border: solid;
   border-radius: 10px;
   padding: 5px;
+}
+
+.downloadButton {
+  font-family: 'Lovelo';
+  text-decoration: none;
+  border: solid;
+  border-radius: 10px;
+  border-color: black;
+  padding: 0 10px;
+  margin-bottom: 3vh;
 }
 
 @media (max-width: 700px) {
@@ -29,8 +39,12 @@
     justify-items: center;
     position: absolute;
     align-items: center;
-    top: 20vh;
+    top: 15vh;
     padding-bottom: 10vh;
     transition: all 0.8s ease-in-out;
+  }
+
+  .downloadButton {
+    margin-bottom: 2vh;
   }
 }

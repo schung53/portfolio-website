@@ -1,16 +1,15 @@
 import Image from 'next/image';
 import styles from './experience-item.module.css';
-import { MediaType, ThemeColor } from './enum';
+import { MediaType } from './enum';
 import { useEffect, useState } from 'react';
-
-const whiteTextThemes = [ThemeColor.DarkBlue];
+import { WHITE_TEXT_THEMES } from '@/utils/color';
 
 function ExperienceItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000")
   const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
   useEffect(() => {
-    if (whiteTextThemes.includes(color)) {
+    if (WHITE_TEXT_THEMES.includes(color)) {
       setTextColor("#FADFB5");
       setIconFile("/link-out-icon-light.svg");
     } else {

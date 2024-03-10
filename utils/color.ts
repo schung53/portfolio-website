@@ -1,5 +1,7 @@
 import { ThemeColor } from "@/components/enum";
 
+export const WHITE_TEXT_THEMES = [ThemeColor.DarkBlue];
+
 export const getLogoFile = (color: ThemeColor) => {
   switch (color) {
     case ThemeColor.DarkBlue:

@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './education-item.module.css';
 import { Fade, Grid } from '@mui/material';
-import { MediaType, ThemeColor } from './enum';
-
-const whiteTextThemes = [ThemeColor.DarkBlue];
+import { MediaType } from './enum';
+import { WHITE_TEXT_THEMES } from '@/utils/color';
 
 function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +12,7 @@ function EducationItem({ item, mediaType, color }: any) {
   const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
   useEffect(() => {
-    if (whiteTextThemes.includes(color)) {
+    if (WHITE_TEXT_THEMES.includes(color)) {
       setTextColor("#FADFB5");
       setIconFile("/arrow-icon-light.svg");
     } else {

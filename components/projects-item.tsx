@@ -2,9 +2,8 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './education-item.module.css';
 import { Fade, Grid } from '@mui/material';
-import { MediaType, ThemeColor } from './enum';
-
-const whiteTextThemes = [ThemeColor.DarkBlue];
+import { MediaType } from './enum';
+import { WHITE_TEXT_THEMES } from '@/utils/color';
 
 function ProjectsItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000")
