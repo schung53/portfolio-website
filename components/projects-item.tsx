@@ -6,7 +6,7 @@ import { MediaType } from "./enum";
 
 function ProjectsItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000");
-  const [holePunchDiameter, setHolePunchDiameter] = useState("18vh");
+  const [holePunchDiameter, setHolePunchDiameter] = useState("");
 
   useEffect(() => {
     if (WHITE_TEXT_THEMES.includes(color)) {
