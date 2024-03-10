@@ -5,7 +5,8 @@
 
 .pageContainer {
   border: solid;
-  border-radius: 10px;
+  border-radius: 2vh;
+  border-width: 0.7vh;
   padding: 5px;
 }
 
@@ -13,7 +14,8 @@
   font-family: 'Lovelo';
   text-decoration: none;
   border: solid;
-  border-radius: 10px;
+  border-radius: 1vh;
+  border-width: 0.5vh;
   border-color: black;
   padding: 0 10px;
   margin-bottom: 3vh;
@@ -46,5 +48,10 @@
 
   .downloadButton {
     margin-bottom: 2vh;
+  }
+
+  .pageContainer {
+    border-radius: 1vh;
+    border-width: 0.5vh;
   }
 }
