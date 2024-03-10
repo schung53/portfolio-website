@@ -86,6 +86,8 @@
   display: grid;
   justify-items: flex-end;
   align-items: center;
+  position: absolute;
+  bottom: 3vh;
 }
 
 .subStackLine {

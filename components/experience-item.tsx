@@ -35,7 +35,7 @@ function ExperienceItem({ item, mediaType, color }: any) {
 
   return (
     <div className={styles.itemContainer} style={{ backgroundColor: color, color: textColor }} onClick={handleClick}>
-      <div>
+      <div style={{ position: 'relative', height: '100%' }}>
         {
           (mediaType !== MediaType.Mobile) ? 
             <span className={styles.titleLine}>
