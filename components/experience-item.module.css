@@ -1,5 +1,5 @@
 .itemContainer {
-  width: 50vw;
+  width: 52vw;
   height: 29vh;
   border-style: solid;
   border-width: 0.8vh;
@@ -67,7 +67,7 @@
 }
 
 .infoLine {
-  width: 50vw;
+  width: 52vw;
   display: flex;
   justify-items: space-between;
   align-items: center;
@@ -97,7 +97,7 @@
 }
 
 .stackLine {
-  width: 50vw;
+  width: 52vw;
   display: grid;
   justify-items: flex-end;
   align-items: center;
@@ -129,7 +129,7 @@
 
 .dashedLine {
   height: 0vh;
-  width: 21vw;
+  width: 23vw;
   border-style: dashed;
   border-width: 0.3vh;
   margin-left: 1.5vw;
