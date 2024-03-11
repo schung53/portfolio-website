@@ -16,7 +16,7 @@
       "Calculus III",
       "Bayesian Statistics"
     ],
-    "image": "/ubc-seal.png",
+    "image": "/ubc-seal.svg",
     "dimensions": [21, 29]
   },
   {
@@ -36,7 +36,7 @@
       "Protein Engineering Lab",
       "Advanced Inorganic Lab"
     ],
-    "image": "/jhu-seal.png",
-    "dimensions": [25, 35]
+    "image": "/jhu-seal.svg",
+    "dimensions": [26, 37]
   }
 ]
