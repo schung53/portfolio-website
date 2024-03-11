@@ -57,7 +57,7 @@
 }
 
 .title {
-  font-size: 3.5vh;
+  font-size: 3.2vh;
   margin-left: 0.75vw;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .stackLine {
-  width: 52vw;
+  width: 52.5vw;
   display: grid;
   justify-items: flex-end;
   align-items: center;
@@ -129,7 +129,7 @@
 
 .dashedLine {
   height: 0vh;
-  width: 23vw;
+  width: 25.5vw;
   border-style: dashed;
   border-width: 0.3vh;
   margin-left: 1.5vw;

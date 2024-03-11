@@ -3,7 +3,7 @@
     "company": "CharterUP",
     "title": "Software Engineer",
     "description": "Modernizing the charter bus experience in America. Building industry-firsts such as live vehicle tracking and a real-time marketplace that brokers $140M in trips per year.",
-    "location": "Austin, TX (Remote)",
+    "location": "Austin, TX",
     "date": "Apr 2023 - Present",
     "url": "https://www.charterup.com",
     "stack": ["Spring Boot", "Vue.js", "MySQL", "AWS"],
