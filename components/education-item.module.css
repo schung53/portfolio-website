@@ -44,7 +44,7 @@
 .sealContainer {
   border: solid;
   border-radius: 0.8vh;
-  border-width: 0.4vh;
+  border-width: 0.33vh;
   border-color: black;
   display: flex;
   justify-content: center;
