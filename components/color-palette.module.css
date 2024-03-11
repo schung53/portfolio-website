@@ -2,13 +2,13 @@
   display: grid;
   position: fixed;
   top: 34vh;
-  right: 5vw;
+  right: 12vh;
   z-index: 1;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px)  {
   .container {
-    right: 3vw;
+    right: 7vw;
   }
 }
 

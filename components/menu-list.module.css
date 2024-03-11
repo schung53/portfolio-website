@@ -9,6 +9,12 @@
   margin-top: 2vh;
 }
 
+@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+  .listContainer {
+    left: 2.5vw;
+  }
+}
+
 @media (max-width: 700px) {
   .listContainer {
     font-family: 'Lovelo';

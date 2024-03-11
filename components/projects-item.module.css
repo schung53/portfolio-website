@@ -118,3 +118,18 @@
     margin-top: 1vh;
   }
 }
+
+@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+  .title {
+    font-size: 1.9vh;
+  }
+
+  .subtitle {
+    font-size: 1.7vh;
+  }
+
+  .description {
+    font-size: 1.8vh;
+    margin-top: 0.7vh;
+  }
+}
