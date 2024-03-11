@@ -165,20 +165,21 @@
 
 @media (max-width: 700px) {
   .titleLine {
-    display: grid;
+    display: flex;
     justify-items: start;
     align-items: center;
     margin-left: 1vw;
+    margin-top: 1vh;
   }
 
   .title {
-    font-size: 2vh;
+    font-size: 1.6vh;
   }
 
   .companyLine {
     display: flex;
     align-items: center;
-    margin-top: -3.5vh;
+    margin-top: -3vh;
   }
 
   .linkIcon {
@@ -192,7 +193,8 @@
   .infoLine {
     width: 80vw;
     margin-left: 3vw;
-    font-size: 1.6vh;
+    font-size: 1.5vh;
+    margin-top: -1.3vh;
   }
 
   .descriptionLine {
@@ -218,5 +220,19 @@
   .stackLine {
     margin-top: -0.5vh;
     width: 80vw;
+  }
+
+  .companyContainer {
+    margin-left: 1vw;
+    background-color: #FAFAF3;
+    width: 11vh;
+    height: 4vh;
+    border: solid;
+    border-radius: 2vw;
+    border-width: 0.34vh;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

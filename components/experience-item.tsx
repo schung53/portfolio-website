@@ -49,16 +49,26 @@ function ExperienceItem({ item, mediaType, color }: any) {
             </span>
             :
             <span className={styles.titleLine}>
-              <p className={styles.title}>{item.title}</p>
-              <div className={styles.companyLine}>
-                <p className={styles.title}>{item.company}</p>
+              <div className={styles.companyContainer}>
                 <Image 
-                  className={styles.linkIcon}
-                  src={iconFile}
-                  alt="Link out"
-                  width={10}
-                  height={10}
-              />
+                  src={item.image}
+                  alt={item.company}
+                  width={item.dimensions[0]}
+                  height={item.dimensions[1]}
+                />
+              </div>
+              <div>
+                <p className={styles.title}>{item.title}</p>
+                <div className={styles.companyLine}>
+                  <p className={styles.title}>{item.company}</p>
+                  <Image 
+                    className={styles.linkIcon}
+                    src={iconFile}
+                    alt="Link out"
+                    width={10}
+                    height={10}
+                />
+                </div>
               </div>
             </span>
         }

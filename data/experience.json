@@ -6,7 +6,9 @@
     "location": "Austin, TX (Remote)",
     "date": "Apr 2023 - Present",
     "url": "https://www.charterup.com",
-    "stack": ["Spring Boot", "Vue.js", "MySQL", "AWS"]
+    "stack": ["Spring Boot", "Vue.js", "MySQL", "AWS"],
+    "image": "/charterup-logo.png",
+    "dimensions": [90, 30]
   },
   {
     "company": "HubSpot",
@@ -15,7 +17,9 @@
     "location": "Boston, MA",
     "date": "Jun 2022 - Aug 2022",
     "url": "https://www.hubspot.com",
-    "stack": ["React.js", "TypeScript"]
+    "stack": ["React.js", "TypeScript"],
+    "image": "/hubspot-logo.svg",
+    "dimensions": [60, 20]
   },
   {
     "company": "Later",
@@ -24,7 +28,9 @@
     "location": "Vancouver, BC",
     "date": "Sept 2021 - Dec 2021",
     "url": "https://later.com",
-    "stack": ["Ember.js", "TypeScript", "Sass"]
+    "stack": ["Ember.js", "TypeScript", "Sass"],
+    "image": "/later-logo.svg",
+    "dimensions": [60, 20]
   },
   {
     "company": "SAP",
@@ -33,6 +39,8 @@
     "location": "Vancouver, BC",
     "date": "Sept 2020 - Apr 2021",
     "url": "https://www.concur.com",
-    "stack": ["Spring Boot", "React.js", "MySQL", "AWS"]
+    "stack": ["Spring Boot", "React.js", "MySQL", "AWS"],
+    "image": "/sap-logo.svg",
+    "dimensions": [60, 20]
   }
 ]

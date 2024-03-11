@@ -11,7 +11,7 @@
 
 @media only screen and (min-width: 700px) and (max-width: 1200px)  {
   .listContainer {
-    left: 2.5vw;
+    left: 1vh;
   }
 }
 
