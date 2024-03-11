@@ -29,7 +29,7 @@
     justify-items: center;
     position: absolute;
     align-items: center;
-    top: 15vh;
+    top: 10vh;
     padding-bottom: 10vh;
     transition: all 0.8s ease-in-out;
   }
