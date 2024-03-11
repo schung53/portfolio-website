@@ -38,6 +38,14 @@ function ExperienceItem({ item, mediaType, color }: any) {
         {
           (mediaType !== MediaType.Mobile) ? 
             <span className={styles.titleLine}>
+              <div className={styles.companyContainer}>
+                <Image 
+                  src={item.image}
+                  alt={item.company}
+                  width={item.dimensions[0] * 1.1}
+                  height={item.dimensions[1] * 1.1}
+                />
+              </div>
               <p className={styles.title}>{`${item.title} • ${item.company}`}</p>
               <Image 
                 className={styles.linkIcon}

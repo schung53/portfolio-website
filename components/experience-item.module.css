@@ -15,6 +15,21 @@
   transition: transform 0.2s ease-in-out;
 }
 
+.companyContainer {
+  margin-left: 2vw;
+  margin-top: -0.5vh;
+  background-color: #FAFAF3;
+  width: 15vh;
+  height: 4.3vh;
+  border: solid;
+  border-radius: 0.75vw;
+  border-width: 0.4vh;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 700px) {
   .itemContainer:hover {
     transform: translate(5px, -5px);
@@ -43,12 +58,12 @@
 
 .title {
   font-size: 3.5vh;
-  margin-left: 2vw;
+  margin-left: 0.75vw;
 }
 
 .titleLine {
   display: flex;
-  justify-items: center;
+  align-items: center;
 }
 
 .infoLine {
@@ -57,7 +72,7 @@
   justify-items: space-between;
   align-items: center;
   font-size: 2vh;
-  margin-top: -3.5vh;
+  margin-top: -2.5vh;
   margin-left: 2vw;
 }
 
@@ -122,8 +137,8 @@
 }
 
 .linkIcon {
-  margin-top: 4vh;
-  margin-left: 0.5vw;
+  margin-top: 1vh;
+  margin-left: 0.3vw;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -133,7 +148,7 @@
   }
   .title {
     font-size: 3vh;
-    margin-left: 2vw;
+    margin-left: 0.8vw;
   }
   
   .titleLine {
@@ -147,6 +162,7 @@
   }
 
   .infoLine {
+    margin-top: -1.8vh;
     width: 65vw;
   }
 
@@ -159,7 +175,7 @@
   }
 
   .linkIcon {
-    margin-top: 3.5vh;
+    margin-top: 1vh;
   }
 }
 
@@ -174,6 +190,7 @@
 
   .title {
     font-size: 1.7vh;
+    margin-left: 2vw;
   }
 
   .companyLine {
@@ -224,15 +241,9 @@
 
   .companyContainer {
     margin-left: 1vw;
-    background-color: #FAFAF3;
     width: 11vh;
     height: 4vh;
-    border: solid;
     border-radius: 2vw;
-    border-width: 0.34vh;
-    border-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-width: 0.35vh;
   }
 }

@@ -39,7 +39,7 @@
 .holePunch {
   border: solid;
   border-radius: 50%;
-  border-width: 0.7vh;
+  border-width: 0.5vh;
   border-color: black;
   background-color: #fafaf3;
   margin: 2vh;
