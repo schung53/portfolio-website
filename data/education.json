@@ -15,7 +15,9 @@
       "Intermediate Algorithm Design and Analysis",
       "Calculus III",
       "Bayesian Statistics"
-    ]
+    ],
+    "image": "/ubc-seal.png",
+    "dimensions": [21, 29]
   },
   {
     "id": "jhu_ba",
@@ -33,6 +35,8 @@
       "Genetics",
       "Protein Engineering Lab",
       "Advanced Inorganic Lab"
-    ]
+    ],
+    "image": "/jhu-seal.png",
+    "dimensions": [25, 35]
   }
 ]

@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import styles from './education-item.module.css';
-import { Fade, Grid } from '@mui/material';
-import { MediaType } from './enum';
-import { WHITE_TEXT_THEMES } from '@/utils/color';
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import styles from "./education-item.module.css";
+import { Fade, Grid } from "@mui/material";
+import { MediaType } from "./enum";
+import { WHITE_TEXT_THEMES } from "@/utils/color";
 
 function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
-  const courseworkStyles = isOpen ? styles.openContainer : styles.closedContainer;
+  const courseworkStyles = isOpen
+    ? styles.openContainer
+    : styles.closedContainer;
   const [textColor, setTextColor] = useState("#000000");
   const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
@@ -24,19 +26,38 @@ function EducationItem({ item, mediaType, color }: any) {
   const handleClick = () => {
     setIsOpen((prev) => {
       return !prev;
-    })
+    });
   };
 
   return (
-    <div className={styles.itemContainer} style={{ backgroundColor: color, color: textColor }} onClick={handleClick}>
+    <div
+      className={styles.itemContainer}
+      style={{ backgroundColor: color, color: textColor }}
+      onClick={handleClick}
+    >
       <div className={styles.innerContainer}>
-        {(mediaType === MediaType.Desktop) && 
+        {mediaType === MediaType.Desktop && (
           <div className={styles.degreeShorthand}>
             <p>{item.degreeShorthand}</p>
-          </div>}
+          </div>
+        )}
         <div className={styles.main}>
           <div>
-            <p className={styles.university}>{item.university}</p>
+            {mediaType === MediaType.Mobile ? (
+              <div className={styles.universityLine}>
+                <div className={styles.sealContainer}>
+                  <Image
+                    src={item.image}
+                    alt="Academic Seal"
+                    width={item.dimensions[0]}
+                    height={item.dimensions[1]}
+                  />
+                </div>
+                <p className={styles.university}>{item.university}</p>
+              </div>
+            ) : (
+              <p className={styles.university}>{item.university}</p>
+            )}
             <p className={styles.degree}>{item.degree}</p>
             <div className={styles.infoLine}>
               <p>{item.date}</p>
@@ -48,32 +69,37 @@ function EducationItem({ item, mediaType, color }: any) {
       </div>
       <div className={courseworkStyles}>
         <Fade in={isOpen} timeout={{ enter: 1400, exit: 0 }}>
-          <Grid container className={styles.courseworkContainer} justifyContent="center">
+          <Grid
+            container
+            className={styles.courseworkContainer}
+            justifyContent="center"
+          >
             {item.coursework.map((course: string) => {
-              return (mediaType !== MediaType.Mobile) ? 
-              <Grid item sx={{ paddingTop: 3.3, paddingBottom: 3.3 }} key={course} className={styles.course}>
-                <div className={styles.courseLabel}>
-                  <p>{course}</p>
-                </div>
-              </Grid>
-              :
-              <Grid item key={course} className={styles.course}>
-                <div className={styles.courseLabel}>
-                  <p>{course}</p>
-                </div>
-              </Grid>
-          })}
+              return mediaType !== MediaType.Mobile ? (
+                <Grid
+                  item
+                  sx={{ paddingTop: 3.3, paddingBottom: 3.3 }}
+                  key={course}
+                  className={styles.course}
+                >
+                  <div className={styles.courseLabel}>
+                    <p>{course}</p>
+                  </div>
+                </Grid>
+              ) : (
+                <Grid item key={course} className={styles.course}>
+                  <div className={styles.courseLabel}>
+                    <p>{course}</p>
+                  </div>
+                </Grid>
+              );
+            })}
           </Grid>
         </Fade>
       </div>
       <span className={styles.iconRow}>
         <div className={styles.arrowIcon}>
-          <Image
-            src={iconFile}
-            alt="Arrow"
-            width={30}
-            height={30}
-          />
+          <Image src={iconFile} alt="Arrow" width={30} height={30} />
         </div>
       </span>
     </div>

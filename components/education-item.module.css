@@ -36,6 +36,24 @@
   justify-items: center;
 }
 
+.universityLine {
+  display: flex;
+  align-items: center;
+}
+
+.sealContainer {
+  border: solid;
+  border-radius: 0.8vh;
+  border-width: 0.3vh;
+  border-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33vw;
+  height: 5.5vh;
+  background-color: #FAFAF3;
+}
+
 .degreeShorthand {
   width: 15vw;
   height: 20vh;
@@ -81,7 +99,9 @@
 
 @media (max-width: 700px) {
   .university {
-    font-size: 2.75vh;
+    font-size: 2.6vh;
+    margin-left: 2.5vw;
+    margin-top: 3vh;
   }
 }
 
@@ -92,7 +112,7 @@
 
 @media (max-width: 700px) {
   .degree {
-    margin-top: -1.5vh;
+    margin-top: 0;
     font-size: 2vh;
   }
 }
