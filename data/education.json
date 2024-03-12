@@ -17,7 +17,9 @@
       "Bayesian Statistics"
     ],
     "image": "/ubc-seal.svg",
-    "dimensions": [21, 29]
+    "dimensions": [21, 29],
+    "diplomaImage": "/ubc-diploma.png",
+    "diplomaDimensions": [125, 95]
   },
   {
     "id": "jhu_ba",
@@ -37,6 +39,8 @@
       "Advanced Inorganic Lab"
     ],
     "image": "/jhu-seal.svg",
-    "dimensions": [26, 37]
+    "dimensions": [26, 37],
+    "diplomaImage": "/jhu-diploma.png",
+    "diplomaDimensions": [125, 105]
   }
 ]

@@ -37,8 +37,14 @@ function EducationItem({ item, mediaType, color }: any) {
     >
       <div className={styles.innerContainer}>
         {mediaType === MediaType.Desktop && (
-          <div className={styles.degreeShorthand}>
-            <p>{item.degreeShorthand}</p>
+          <div className={styles.degreeContainer}>
+            <Image
+              className={styles.degreeImage}
+              src={item.diplomaImage}
+              alt="Diploma"
+              width={item.diplomaDimensions[0]}
+              height={item.diplomaDimensions[1]}
+            />
           </div>
         )}
         <div className={styles.main}>

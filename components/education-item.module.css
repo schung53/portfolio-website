@@ -54,19 +54,24 @@
   background-color: #FAFAF3;
 }
 
-.degreeShorthand {
+.degreeContainer {
   width: 15vw;
-  height: 20vh;
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 6vh;
-  margin-top: 2vh;
 }
 
 .main {
   height: 20vh;
   margin-top: 2vh;
+}
+
+.degreeImage {
+  border: solid;
+  border-radius: 1vh;
+  border-width: 0.33vh;
+  border-color: black;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px)  {
@@ -169,7 +174,7 @@
 .openContainer {
   transition: all 0.5s;
   height: 30vh;
-  margin-top: -6.5vh;
+  margin-top: -3vh;
   margin-bottom: 5vh;
 }
 
