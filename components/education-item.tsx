@@ -79,8 +79,8 @@ function EducationItem({ item, mediaType, color }: any) {
                   className={styles.degreeImage}
                   src={item.diplomaImage}
                   alt="Diploma"
-                  width={item.diplomaDimensions[0] * 6.5}
-                  height={item.diplomaDimensions[1] * 6.5}
+                  width={item.diplomaDimensions[0] * item.diplomaScale}
+                  height={item.diplomaDimensions[1] * item.diplomaScale}
                 />
               </DialogContent>
             </Dialog>

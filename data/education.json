@@ -19,7 +19,8 @@
     "image": "/ubc-seal.svg",
     "dimensions": [21, 29],
     "diplomaImage": "/ubc-diploma.png",
-    "diplomaDimensions": [125, 95]
+    "diplomaDimensions": [125, 95],
+    "diplomaScale": 6.5
   },
   {
     "id": "jhu_ba",
@@ -41,6 +42,7 @@
     "image": "/jhu-seal.svg",
     "dimensions": [26, 37],
     "diplomaImage": "/jhu-diploma.png",
-    "diplomaDimensions": [125, 105]
+    "diplomaDimensions": [125, 105],
+    "diplomaScale": 6
   }
 ]
