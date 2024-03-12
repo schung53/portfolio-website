@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./education-item.module.css";
-import { Fade, Grid } from "@mui/material";
+import { Fade, Grid, Dialog, DialogContent } from "@mui/material";
 import { MediaType } from "./enum";
 import { WHITE_TEXT_THEMES } from "@/utils/color";
 
 function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const courseworkStyles = isOpen
     ? styles.openContainer
     : styles.closedContainer;
@@ -29,6 +31,16 @@ function EducationItem({ item, mediaType, color }: any) {
     });
   };
 
+  const handleModalOpen = (event: any) => {
+    event.stopPropagation();
+    setIsModalOpen(true);
+  };
+
+  const handleModalClose = (event: any) => {
+    event.stopPropagation();
+    setIsModalOpen(false);
+  };
+
   return (
     <div
       className={styles.itemContainer}
@@ -37,15 +49,42 @@ function EducationItem({ item, mediaType, color }: any) {
     >
       <div className={styles.innerContainer}>
         {mediaType === MediaType.Desktop && (
-          <div className={styles.degreeContainer}>
-            <Image
-              className={styles.degreeImage}
-              src={item.diplomaImage}
-              alt="Diploma"
-              width={item.diplomaDimensions[0]}
-              height={item.diplomaDimensions[1]}
-            />
-          </div>
+          <>
+            <div className={styles.degreeContainer} onClick={handleModalOpen}>
+              <Image
+                className={styles.degreeImage}
+                src={item.diplomaImage}
+                alt="Diploma"
+                width={item.diplomaDimensions[0]}
+                height={item.diplomaDimensions[1]}
+              />
+            </div>
+            <Dialog
+              sx={{
+                "& .MuiPaper-root": {
+                  backgroundColor: "",
+                  border: "0.33vh solid",
+                  borderRadius: "1.75vh",
+                },
+              }}
+              maxWidth="lg"
+              open={isModalOpen}
+              onClose={handleModalClose}
+            >
+              <DialogContent
+                sx={{ backgroundColor: "#213555" }}
+                onClick={handleModalClose}
+              >
+                <Image
+                  className={styles.degreeImage}
+                  src={item.diplomaImage}
+                  alt="Diploma"
+                  width={item.diplomaDimensions[0] * 6.5}
+                  height={item.diplomaDimensions[1] * 6.5}
+                />
+              </DialogContent>
+            </Dialog>
+          </>
         )}
         <div className={styles.main}>
           <div>
