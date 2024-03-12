@@ -65,6 +65,7 @@ function EducationItem({ item, mediaType, color }: any) {
                   backgroundColor: "",
                   border: "0.33vh solid",
                   borderRadius: "1.75vh",
+                  marginRight: "5vh"
                 },
               }}
               maxWidth="lg"
