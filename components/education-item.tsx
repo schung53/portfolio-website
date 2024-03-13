@@ -68,8 +68,8 @@ function EducationItem({ item, mediaType, color }: any) {
                 className={styles.degreeImage}
                 src={item.diplomaImage}
                 alt="Diploma"
-                width={item.diplomaDimensions[0]}
-                height={item.diplomaDimensions[1]}
+                width={item.diplomaDimensions[0] * 1.2}
+                height={item.diplomaDimensions[1] * 1.2}
                 onClick={handleModalOpen}
               />
             </div>

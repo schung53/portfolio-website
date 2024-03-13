@@ -76,7 +76,7 @@ function ResumeTab({ isMenuOpen, color }: any) {
   };
 
   return (
-    <div className={containerStyles} style={{ minWidth: "60%" }}>
+    <div className={containerStyles} style={{ minWidth: "60vw" }}>
       <div style={{ display: "flex", justifyContent: "end", width: "100%" }}>
         <a className={styles.downloadButton} href="resume.pdf" download style={{ backgroundColor: color, color: textColor }}>
           <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
