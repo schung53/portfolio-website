@@ -1,21 +1,26 @@
-import { useState, useEffect, useCallback } from 'react';
-import EducationItem from './education-item';
-import styles from './education-tab.module.css';
-import data from '../data/education.json';
-import { MediaType } from './enum';
+import { useState, useEffect, useCallback } from "react";
+import EducationItem from "./education-item";
+import styles from "./education-tab.module.css";
+import data from "../data/education.json";
+import { MediaType } from "./enum";
 
 function EducationTab({ isMenuOpen, color }: any) {
   const [mediaType, setMediaType] = useState(MediaType.Desktop);
   const [containerStyles, setContainerStyles] = useState(styles.container);
 
-  const updateMenuStyles = useCallback((isOpen: any) => {
-    if (mediaType !== MediaType.Mobile) {
-      setContainerStyles(styles.container);
-      return;
-    }
-    const menuStyles = isOpen ? styles.menuOpenContainer : styles.menuClosedContainer;
-    setContainerStyles(menuStyles);
-  }, [mediaType]);
+  const updateMenuStyles = useCallback(
+    (isOpen: any) => {
+      if (mediaType !== MediaType.Mobile) {
+        setContainerStyles(styles.container);
+        return;
+      }
+      const menuStyles = isOpen
+        ? styles.menuOpenContainer
+        : styles.menuClosedContainer;
+      setContainerStyles(menuStyles);
+    },
+    [mediaType]
+  );
 
   useEffect(() => {
     updateMenuStyles(isMenuOpen);
@@ -42,9 +47,15 @@ function EducationTab({ isMenuOpen, color }: any) {
 
   return (
     <div className={containerStyles}>
-      {data.map((item, index) =>
-        <EducationItem key={item.degree} item={item} index={index} mediaType={mediaType} color={color} />)
-      }
+      {data.map((item, index) => (
+        <EducationItem
+          key={item.degree}
+          item={item}
+          index={index}
+          mediaType={mediaType}
+          color={color}
+        />
+      ))}
     </div>
   );
 }
