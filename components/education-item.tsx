@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import styles from "./education-item.module.css";
 import { Fade, Grid, Dialog, DialogContent } from "@mui/material";
@@ -8,10 +8,7 @@ import { WHITE_TEXT_THEMES } from "@/utils/color";
 function EducationItem({ item, mediaType, color }: any) {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const courseworkStyles = isOpen
-    ? styles.openContainer
-    : styles.closedContainer;
+  const [courseworkHeight, setCourseworkHeight] = useState("0vh");
   const [textColor, setTextColor] = useState("#000000");
   const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
@@ -41,6 +38,22 @@ function EducationItem({ item, mediaType, color }: any) {
     setIsModalOpen(false);
   };
 
+  const updateCourseworkStyles = useCallback(
+    (isOpen: boolean) => {
+      const openHeight = mediaType === MediaType.Mobile ? "45vh" : "35vh";
+      if (isOpen) {
+        setCourseworkHeight(openHeight);
+        return;
+      }
+      setCourseworkHeight("0vh");
+    },
+    [mediaType]
+  );
+
+  useEffect(() => {
+    updateCourseworkStyles(isOpen);
+  }, [isOpen, updateCourseworkStyles]);
+
   return (
     <div
       className={styles.itemContainer}
@@ -66,7 +79,7 @@ function EducationItem({ item, mediaType, color }: any) {
                   backgroundColor: "",
                   border: "0.33vh solid",
                   borderRadius: "1.75vh",
-                  marginRight: "5vh"
+                  marginRight: "12vh",
                 },
               }}
               maxWidth="lg"
@@ -114,7 +127,14 @@ function EducationItem({ item, mediaType, color }: any) {
           </div>
         </div>
       </div>
-      <div className={courseworkStyles}>
+      <div
+        className={styles.courseworkListContainer}
+        style={{
+          height: courseworkHeight,
+          marginTop: mediaType === MediaType.Mobile ? "1vh" : "0vh",
+          marginBottom: mediaType === MediaType.Mobile ? "1vh" : "0vh",
+        }}
+      >
         <Fade in={isOpen} timeout={{ enter: 1400, exit: 0 }}>
           <Grid
             container
@@ -125,7 +145,11 @@ function EducationItem({ item, mediaType, color }: any) {
               return mediaType !== MediaType.Mobile ? (
                 <Grid
                   item
-                  sx={{ paddingTop: 3.3, paddingBottom: 3.3 }}
+                  sx={{
+                    paddingTop: "3.3vh",
+                    paddingBottom: "3.3vh",
+                    marginRight: "1vh",
+                  }}
                   key={course}
                   className={styles.course}
                 >
@@ -144,8 +168,11 @@ function EducationItem({ item, mediaType, color }: any) {
           </Grid>
         </Fade>
       </div>
-      <span className={styles.iconRow}>
-        <div className={styles.arrowIcon}>
+      <span
+        className={styles.iconRow}
+        style={{ marginTop: isOpen ? "-5vh" : "0vh" }}
+      >
+        <div id="arrow-icon" className={styles.arrowIcon}>
           <Image src={iconFile} alt="Arrow" width={30} height={30} />
         </div>
       </span>

@@ -150,9 +150,9 @@
 }
 
 .iconRow {
-  display: grid;
-  justify-items: center;
-  margin-top: -5vh;
+  display: flex;
+  justify-content: center;
+  transition: all 0.7s ease-in-out;
 }
 
 @media (max-width: 700px) {
@@ -171,33 +171,17 @@
   transform: rotate(180deg) translateY(1vh);
 }
 
-.openContainer {
-  transition: all 0.5s;
-  height: 30vh;
-  margin-top: -3vh;
-  margin-bottom: 5vh;
-}
-
-@media (max-width: 700px) {
-  .openContainer {
-    transition: all 0.5s;
-    height: 45vh;
-    display: grid;
-    align-items: start;
-    margin-top: 1vh;
-    margin-bottom: 0vh;
-  }
-}
-
-.closedContainer {
+.courseworkListContainer {
   transition: all 0.7s;
-  height: 0vh
 }
 
 @media (max-width: 700px) {
-  .closedContainer {
+  .courseworkListContainer {
     transition: all 0.5s;
-    height: 4vh;
+  }
+
+  .itemContainer:hover .arrowIcon {
+    transform: none;
   }
 }
 
@@ -208,6 +192,7 @@
   font-size: 2.2vh;
   display: grid;
   margin-left: 2vw;
+  margin-top: -2.75vw;
 }
 
 @media (max-width: 700px) {
@@ -272,11 +257,3 @@
     margin-left: -1vw;
   }
 }
-
-@media screen and (min-width: 700px) and (max-height: 700px) {
-  .openContainer {
-    min-height: 37vh;
-    margin-bottom: 5vh;
-  }
-}
-

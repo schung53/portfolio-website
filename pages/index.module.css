@@ -1,7 +1,7 @@
 .container {
   height: 95vh;
   display: grid;
-  justify-items: center;
+  justify-content: center;
 }
 
 .burgerMenuLine {
@@ -12,9 +12,8 @@
 }
 
 .burgerMenu {
-  margin-left: 0.3vw;
-  margin-top: 2vw;
-  position: fixed;
+  margin-left: 1.5vw;
+  margin-top: 1.5vw;
 }
 
 @media (max-width: 700px) {

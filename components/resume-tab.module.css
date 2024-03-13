@@ -1,6 +1,5 @@
 .pdfContainer {
-  position: absolute;
-  top: 15vh;
+  margin-top: 15vh;
 }
 
 .pageContainer {
