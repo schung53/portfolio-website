@@ -31,6 +31,7 @@ function ResumeTab({ isMenuOpen, color }: any) {
   const updateMenuStyles = useCallback(
     (isOpen: any) => {
       if (mediaType !== MediaType.Mobile) {
+        setContainerStyles(styles.pdfContainer);
         return;
       }
       const menuStyles = isOpen

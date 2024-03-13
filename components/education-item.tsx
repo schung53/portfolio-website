@@ -12,6 +12,8 @@ function EducationItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000");
   const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
+  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+
   useEffect(() => {
     if (WHITE_TEXT_THEMES.includes(color)) {
       setTextColor("#FADFB5");
@@ -61,15 +63,15 @@ function EducationItem({ item, mediaType, color }: any) {
       onClick={handleClick}
     >
       <div className={styles.innerContainer}>
-        {mediaType === MediaType.Desktop && (
+        {!isMobile && mediaType === MediaType.Desktop && (
           <>
             <div className={styles.degreeContainer}>
               <Image
                 className={styles.degreeImage}
                 src={item.diplomaImage}
                 alt="Diploma"
-                width={item.diplomaDimensions[0] * 1.2}
-                height={item.diplomaDimensions[1] * 1.2}
+                width={item.diplomaDimensions[0] * 1.1}
+                height={item.diplomaDimensions[1] * 1.1}
                 onClick={handleModalOpen}
               />
             </div>

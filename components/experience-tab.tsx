@@ -10,6 +10,7 @@ function ExperienceTab({ isMenuOpen, color }: any) {
 
   const updateMenuStyles = useCallback((isOpen: any) => {
     if (mediaType !== MediaType.Mobile) {
+      setContainerStyles(styles.container);
       return;
     }
     const menuStyles = isOpen ? styles.menuOpenContainer : styles.menuClosedContainer;

@@ -192,7 +192,7 @@
   font-size: 2.2vh;
   display: grid;
   margin-left: 2vw;
-  margin-top: -2.75vw;
+  margin-top: -4vh;
 }
 
 @media (max-width: 700px) {
