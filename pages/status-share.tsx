@@ -115,7 +115,6 @@ function StatusShare() {
               <li>Authentication & authorization</li>
               <li>User roles & permissions</li>
               <li>Persistent login</li>
-              <li>Dark mode</li>
             </ul>
             <Image
               className={styles.photoContainer}
