@@ -157,8 +157,8 @@ function NeuroResearch() {
               Another area of research was deep brain stimulation (DBS) for the
               treatment of self-injurious behavior (SIB) associated with autism
               (ASD). We were able to demonstrate that DBS-like stimulation at
-              the subthalamic nucleus of the mouse brain was able to suppress
-              SIB-like behavior in mouse models.
+              the subthalamic nucleus of the mouse brain suppresses SIB-like
+              behavior in mouse models.
             </p>
             <p className={styles.paragraph} style={{ marginTop: "5vh" }}>
               Below are my co-authored publications:
