@@ -16,7 +16,7 @@ const DESKTOP_WIDTH_SCALE = 45;
 const MOBILE_WIDTH_SCALE = 80;
 
 const DESKTOP_MINI_WIDTH_SCALE = 13.5;
-const MOBILE_MINI_WIDTH_SCALE = 10;
+const MOBILE_MINI_WIDTH_SCALE = 25;
 
 const getDimension = (photo: string, index: number): number => {
   if (PHOTO_DIMENSIONS.get(photo)) {

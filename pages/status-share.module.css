@@ -68,7 +68,7 @@
 .photoContainer {
   width: 45vw;
   border: solid;
-  border-radius: 2vh;
+  border-radius: 1.5vh;
   border-width: 0.4vh;
   border-color: black;
   margin-top: 2vh;
@@ -77,11 +77,59 @@
 
 .miniPhotoContainer {
   border: solid;
-  border-radius: 2vh;
+  border-radius: 1.5vh;
   border-width: 0.4vh;
   border-color: black;
   margin-top: 2vh;
   margin-bottom: 1vh;
   margin-right: 1vw;
   margin-left: 1vw;
+}
+
+@media (max-width: 700px) {
+  .title {
+    width: 80vw;
+    font-size: 6vw;
+    margin-top: 11vh;
+  }
+
+  .paragraph {
+    width: 80vw;
+  }
+
+  .photoContainer {
+    max-width: 80vw;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    border-radius: 3vw;
+  }
+
+  .backButton {
+    position: absolute;
+    top: 5vw;
+    left: 5vw;
+  }
+
+  .subHeader {
+    display: grid;
+    position: start;
+    width: 80vw;
+    .leftSubHeader {
+      max-width: 70vw;
+    }
+    .rightSubHeader {
+      max-width: 80vw;
+      margin-top: -1vh;
+      margin-bottom: 1.5vh;
+      .linkName {
+        margin-left: 3vw;
+      }
+    }
+  }
+
+  .miniPhotoContainer {
+    border-radius: 3vw;
+    border-width: 0.3vh;
+  }
+
 }
