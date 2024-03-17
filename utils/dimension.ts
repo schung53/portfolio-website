@@ -3,6 +3,13 @@ const PHOTO_DIMENSIONS: Map<string, number[]> = new Map([
   ["neurogenesis.png", [984, 413]],
   ["crispr.jpg", [1921, 1081]],
   ["stn-dbs.png", [978, 504]],
+  ["status-share-diagram.png", [4026, 2336]],
+  ["status-share-0.png", [3006, 1636]],
+  ["status-share-1.png", [1527, 834]],
+  ["status-share-2.png", [3002, 1644]],
+  ["status-share-4.png", [391, 791]],
+  ["status-share-5.png", [385, 788]],
+  ["status-share-6.png", [385, 790]],
 ]);
 
 const DESKTOP_WIDTH_SCALE = 45;
