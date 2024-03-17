@@ -65,7 +65,7 @@ function BcsLogo() {
                   onClick={() => handleLinkClick(UBC_BCS_URL)}
                 >
                   <Image
-                    style={{ width: 99 * 0.2, height: 135 * 0.2 }}
+                    style={{ width: 99 * 0.185, height: 135 * 0.185 }}
                     src="/ubc-logo.png"
                     alt="UBC"
                     width={99}
