@@ -90,6 +90,8 @@
     max-width: 80vw;
     margin-top: 1vh;
     margin-bottom: 0vh;
+    border-radius: 3vw;
+    border-width: 0.3vh;
   }
 
   .backButton {
