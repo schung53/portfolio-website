@@ -99,10 +99,10 @@ function StatusShare() {
             <p className={styles.paragraph} style={{ marginTop: "3vh" }}>
               Status Share is an internal tool used daily by staff of the
               Medical Physics Department at BC Cancer, a cancer treatment center
-              in Vancouver, Canada. The web app tracks equipment and employee
-              statuses and allows staff to send messages and share memos. I
-              worked with Don Ta, a Radiation Therapy Services Technologist at
-              BC Cancer, to develop requirements and design the product.
+              in Vancouver. The web app tracks equipment and employee statuses
+              and allows staff to send messages and share memos. I worked with
+              Don Ta, a Radiation Therapy Services Technologist at BC Cancer, to
+              develop requirements and design the product.
             </p>
             <p className={styles.paragraph} style={{ marginTop: "0.3vh" }}>
               On a surface level, it’s a run-of-the-mill CRUD app built on the
