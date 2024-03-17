@@ -74,3 +74,14 @@
   margin-top: 2vh;
   margin-bottom: 1vh;
 }
+
+.miniPhotoContainer {
+  border: solid;
+  border-radius: 2vh;
+  border-width: 0.4vh;
+  border-color: black;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}

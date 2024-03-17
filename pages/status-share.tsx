@@ -2,7 +2,12 @@ import ScrollToTop from "@/components/scroll-to-top";
 import styles from "./status-share.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { getWidth, getHeight, getNewDimensions } from "@/utils/dimension";
+import {
+  getWidth,
+  getHeight,
+  getNewDimensions,
+  getNewMiniDimensions,
+} from "@/utils/dimension";
 import { useEffect, useState } from "react";
 import { MediaType } from "@/components/enum";
 
@@ -144,6 +149,41 @@ function StatusShare() {
               maintained contact with the department and handled any bugs or
               feature requests. In 2022, I re-built the app from the ground up
               to include a UI re-design and new features such as dark mode.
+            </p>
+            <span>
+              <Image
+                className={styles.miniPhotoContainer}
+                src="/status-share-3.png"
+                alt="Status Share"
+                style={getNewMiniDimensions("status-share-3.png", isMobile)}
+                width={getWidth("status-share-3.png")}
+                height={getHeight("status-share-3.png")}
+              />
+              <Image
+                className={styles.miniPhotoContainer}
+                src="/status-share-4.png"
+                alt="Status Share"
+                style={getNewMiniDimensions("status-share-4.png", isMobile)}
+                width={getWidth("status-share-4.png")}
+                height={getHeight("status-share-4.png")}
+              />
+              <Image
+                className={styles.miniPhotoContainer}
+                src="/status-share-5.png"
+                alt="Status Share"
+                style={getNewMiniDimensions("status-share-5.png", isMobile)}
+                width={getWidth("status-share-5.png")}
+                height={getHeight("status-share-5.png")}
+              />
+            </span>
+            <p
+              className={styles.paragraph}
+              style={{ marginTop: "3vh", marginBottom: "15vh" }}
+            >
+              Special care was taken to ensure that the design is fully
+              responsive for all device types. The department staff are often on
+              the move, so I wanted the app to be fully functional and just as
+              user-friendly in mobile.
             </p>
           </span>
         </div>
