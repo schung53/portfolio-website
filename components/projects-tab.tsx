@@ -3,7 +3,6 @@ import ProjectsItem from "./projects-item";
 import styles from "./projects-tab.module.css";
 import data from "../data/projects.json";
 import { MediaType } from "./enum";
-import Link from "next/link";
 
 function ProjectsTab({ isMenuOpen, color }: any) {
   const [mediaType, setMediaType] = useState(MediaType.Desktop);
@@ -49,13 +48,12 @@ function ProjectsTab({ isMenuOpen, color }: any) {
   return (
     <div className={containerStyles}>
       {data.map((item) => (
-        <Link
+        <ProjectsItem
           key={item.title}
-          href={item.route}
-          style={{ textDecoration: "none" }}
-        >
-          <ProjectsItem item={item} mediaType={mediaType} color={color} />
-        </Link>
+          item={item}
+          mediaType={mediaType}
+          color={color}
+        />
       ))}
     </div>
   );

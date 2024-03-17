@@ -49,10 +49,16 @@ function ProjectsItem({ item, mediaType, color }: any) {
     return dimension;
   };
 
+  const handleClick = () => {
+    history.pushState({}, "", "/?tab=3");
+    window.location.href = item.route;
+  };
+
   return (
     <div
       className={styles.itemContainer}
       style={{ backgroundColor: color, color: textColor }}
+      onClick={handleClick}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
         <div
