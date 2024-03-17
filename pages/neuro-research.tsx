@@ -57,7 +57,7 @@ function NeuroResearch() {
             <div className={styles.subHeader}>
               <div className={styles.leftSubHeader}>
                 Institution:
-                <ul>
+                <ul style={{ marginTop: "0.3vh" }}>
                   <li>Johns Hopkins University School of Medicine</li>
                 </ul>
               </div>

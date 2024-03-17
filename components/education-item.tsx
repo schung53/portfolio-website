@@ -78,7 +78,7 @@ function EducationItem({ item, mediaType, color }: any) {
             <Dialog
               sx={{
                 "& .MuiPaper-root": {
-                  backgroundColor: "",
+                  backgroundColor: "#213555",
                   border: "0.33vh solid",
                   borderRadius: "1.75vh",
                   marginRight: "12vh",
