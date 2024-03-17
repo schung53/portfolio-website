@@ -65,10 +65,11 @@ function BcsLogo() {
                   onClick={() => handleLinkClick(UBC_BCS_URL)}
                 >
                   <Image
-                    src="/ubc-seal.svg"
+                    style={{ width: 99 * 0.2, height: 135 * 0.2 }}
+                    src="/ubc-logo.png"
                     alt="UBC"
-                    width={27.5}
-                    height={27.5}
+                    width={99}
+                    height={135}
                   />
                 </div>
                 <p
