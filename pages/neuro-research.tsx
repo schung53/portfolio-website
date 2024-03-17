@@ -5,11 +5,10 @@ import Link from "next/link";
 
 const GOOGLE_SCHOLAR_URL =
   "https://scholar.google.com/citations?hl=en&user=fZUV7CMAAAAJ";
-const ECS_PAPER_URL = "https://www.nature.com/articles/npp2017252"
-const DBS_PAPER_URL = "https://www.nature.com/articles/npp2015350"
+const ECS_PAPER_URL = "https://www.nature.com/articles/npp2017252";
+const DBS_PAPER_URL = "https://www.nature.com/articles/npp2015350";
 
-function NeuroResearch({ onSet }: any) {
-
+function NeuroResearch() {
   const handleLinkClick = (link: string) => {
     window.open(link, "_blank", "noreferrer");
   };
@@ -18,7 +17,7 @@ function NeuroResearch({ onSet }: any) {
     <ScrollToTop>
       <main style={{ display: "grid", justifyContent: "center" }}>
         <div className={styles.container}>
-          <Link href="/">
+          <Link href="/?tab=3">
             <Image
               className={styles.backButton}
               src="/back-button.svg"
@@ -39,7 +38,10 @@ function NeuroResearch({ onSet }: any) {
                 </ul>
               </div>
               <div className={styles.rightSubHeader}>
-                <div className={styles.linkButton} onClick={() => handleLinkClick(GOOGLE_SCHOLAR_URL)}>
+                <div
+                  className={styles.linkButton}
+                  onClick={() => handleLinkClick(GOOGLE_SCHOLAR_URL)}
+                >
                   <Image
                     src="/google-scholar-icon.png"
                     alt="Google Scholar"
@@ -47,7 +49,10 @@ function NeuroResearch({ onSet }: any) {
                     height={27.5}
                   />
                 </div>
-                <p className={styles.linkName} onClick={() => handleLinkClick(GOOGLE_SCHOLAR_URL)}>
+                <p
+                  className={styles.linkName}
+                  onClick={() => handleLinkClick(GOOGLE_SCHOLAR_URL)}
+                >
                   Google Scholar
                 </p>
               </div>
@@ -130,19 +135,28 @@ function NeuroResearch({ onSet }: any) {
             <p className={styles.paragraph} style={{ marginTop: "5vh" }}>
               Below are my co-authored publications:
             </p>
-            <p className={styles.paragraph} style={{ marginTop: "0.5vh", cursor: "pointer" }} onClick={() => handleLinkClick(ECS_PAPER_URL)}>
+            <p
+              className={styles.paragraph}
+              style={{ marginTop: "0.5vh", cursor: "pointer" }}
+              onClick={() => handleLinkClick(ECS_PAPER_URL)}
+            >
               Chang, A., Vaidya, P., Retzbach, E., <b>Chung, S.</b> et al. Narp
               Mediates Antidepressant-Like Effects of Electroconvulsive
               Seizures. <i>Neuropsychopharmacology</i> <b>43</b>, 1088–1098
               (2018). <i style={{ color: "blue" }}>[Nature]</i>
             </p>
-            <p className={styles.paragraph} style={{ marginTop: "0.5vh", cursor: "pointer" }} onClick={() => handleLinkClick(DBS_PAPER_URL)}>
+            <p
+              className={styles.paragraph}
+              style={{ marginTop: "0.5vh", cursor: "pointer" }}
+              onClick={() => handleLinkClick(DBS_PAPER_URL)}
+            >
               Chang, A., Berges, V., <b>Chung, S.</b> et al. High-Frequency
               Stimulation at the Subthalamic Nucleus Suppresses Excessive
               Self-Grooming in Autism-Like Mouse Models.{" "}
-              <i>Neuropsychopharmacology</i> <b>41</b>, 1813–1821 (2016). <i style={{ color: "blue" }}>[Nature]</i>
+              <i>Neuropsychopharmacology</i> <b>41</b>, 1813–1821 (2016).{" "}
+              <i style={{ color: "blue" }}>[Nature]</i>
             </p>
-            
+
             <div style={{ height: "10vh" }} />
           </span>
         </div>

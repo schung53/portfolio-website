@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BurgerMenu from "@/components/burger-menu";
-import styles from './index.module.css';
+import styles from "./index.module.css";
 import MenuList from "@/components/menu-list";
 import HomeTab from "@/components/home-tab";
 import ExperienceTab from "@/components/experience-tab";
@@ -18,6 +18,15 @@ function Home({ onSet }: any) {
   const [themeColor, setThemeColor] = useState(ThemeColor.DarkBlue);
   const [menuItemClicked, setMenuItemClicked] = useState(false);
 
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get("tab");
+    if (tabParam) {
+      setTabId(parseInt(tabParam));
+      window.history.pushState({}, document.title, "/");
+    }
+  }, []);
+
   const handleOpen = () => {
     setMenuItemClicked(false);
     setIsMenuOpen(true);
@@ -33,11 +42,11 @@ function Home({ onSet }: any) {
     } else {
       handleOpen();
     }
-  }
+  };
 
   const handleTabClick = (tabId: number) => {
     setMenuItemClicked(true);
-    return setTabId(tabId)
+    return setTabId(tabId);
   };
 
   const handleSetColor = (color: ThemeColor) => {
@@ -68,9 +77,17 @@ function Home({ onSet }: any) {
       <main>
         <div onClick={handleClose} className={styles.container}>
           <div className={styles.menuContainer}>
-            <MenuList onClick={handleTabClick} isMenuOpen={isMenuOpen} isHidden={menuItemClicked} />
+            <MenuList
+              onClick={handleTabClick}
+              isMenuOpen={isMenuOpen}
+              isHidden={menuItemClicked}
+            />
             <ContactList isMenuOpen={isMenuOpen} isHidden={menuItemClicked} />
-            <ColorPalette isMenuOpen={isMenuOpen} onClick={handleSetColor} isHidden={menuItemClicked} />
+            <ColorPalette
+              isMenuOpen={isMenuOpen}
+              onClick={handleSetColor}
+              isHidden={menuItemClicked}
+            />
           </div>
           <span className={styles.burgerMenuLine}>
             <div className={styles.burgerMenu}>
