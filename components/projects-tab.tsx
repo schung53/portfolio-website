@@ -1,21 +1,27 @@
-import { useState, useEffect, useCallback } from 'react';
-import ProjectsItem from './projects-item';
-import styles from './projects-tab.module.css';
-import data from '../data/projects.json';
-import { MediaType } from './enum';
+import { useState, useEffect, useCallback } from "react";
+import ProjectsItem from "./projects-item";
+import styles from "./projects-tab.module.css";
+import data from "../data/projects.json";
+import { MediaType } from "./enum";
+import Link from "next/link";
 
 function ProjectsTab({ isMenuOpen, color }: any) {
   const [mediaType, setMediaType] = useState(MediaType.Desktop);
   const [containerStyles, setContainerStyles] = useState(styles.container);
 
-  const updateMenuStyles = useCallback((isOpen: any) => {
-    if (mediaType !== MediaType.Mobile) {
-      setContainerStyles(styles.container);
-      return;
-    }
-    const menuStyles = isOpen ? styles.menuOpenContainer : styles.menuClosedContainer;
-    setContainerStyles(menuStyles);
-  }, [mediaType]);
+  const updateMenuStyles = useCallback(
+    (isOpen: any) => {
+      if (mediaType !== MediaType.Mobile) {
+        setContainerStyles(styles.container);
+        return;
+      }
+      const menuStyles = isOpen
+        ? styles.menuOpenContainer
+        : styles.menuClosedContainer;
+      setContainerStyles(menuStyles);
+    },
+    [mediaType]
+  );
 
   useEffect(() => {
     updateMenuStyles(isMenuOpen);
@@ -42,8 +48,15 @@ function ProjectsTab({ isMenuOpen, color }: any) {
 
   return (
     <div className={containerStyles}>
-      {data.map((item) => 
-        <ProjectsItem key={item.date} item={item} mediaType={mediaType} color={color} />)}
+      {data.map((item) => (
+        <Link
+          key={item.title}
+          href={item.route}
+          style={{ textDecoration: "none" }}
+        >
+          <ProjectsItem item={item} mediaType={mediaType} color={color} />
+        </Link>
+      ))}
     </div>
   );
 }

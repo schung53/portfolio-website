@@ -1,0 +1,97 @@
+.container {
+  display: grid;
+  justify-content: center;
+  width: 95vw;
+}
+
+.backButton {
+  position: absolute;
+  top: 3vh;
+  left: 3vh;
+}
+
+.title {
+  font-family: "Lovelo";
+  font-size: 3vh;
+  margin-top: 7.5vh;
+}
+
+.fullWidthLine {
+  display: flex;
+  justify-content: center;
+  width: 95vw;
+}
+
+.bodyContainer {
+  display: grid;
+  justify-items: center;
+  width: 95vw;
+  font-family: "Lora";
+}
+
+.paragraph {
+  width: 40vw;
+}
+
+.photoContainer {
+  width: 40vw;
+  border: solid;
+  border-radius: 2vh;
+  border-width: 0.4vh;
+  border-color: black;
+}
+
+.jhmiPhoto {
+  height: 26.7vw;
+  margin-top: 2vh;
+}
+
+.neurogenesis {
+  height: 16.8vw;
+  margin-top: 2vh;
+}
+
+.crispr {
+  height: 22.5vw;
+  margin-top: 2vh;
+}
+
+.dbs {
+  height: 20.6vw;
+  margin-top: 2vh;
+}
+
+.subHeader {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Lora";
+  font-size: 2vh;
+  width: 35vw;
+
+  .leftSubHeader {
+    max-width: 17.5vw;
+  }
+  .rightSubHeader {
+    max-width: 17.5vw;
+    display: flex;
+    align-items: center;
+  }
+  .linkButton {
+    width: 5vh;
+    height: 5vh;
+    background-color: black;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .linkName {
+    margin-left: 1vw;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+
