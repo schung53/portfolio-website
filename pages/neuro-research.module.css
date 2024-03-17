@@ -39,25 +39,6 @@
   border-radius: 2vh;
   border-width: 0.4vh;
   border-color: black;
-}
-
-.jhmiPhoto {
-  height: 30vw;
-  margin-top: 2vh;
-}
-
-.neurogenesis {
-  height: 18.9vw;
-  margin-top: 2vh;
-}
-
-.crispr {
-  height: 25.3vw;
-  margin-top: 2vh;
-}
-
-.dbs {
-  height: 23.2vw;
   margin-top: 2vh;
 }
 
@@ -106,6 +87,7 @@
 
   .photoContainer {
     max-width: 80vw;
+    margin-top: 1vh;
   }
 
   .backButton {

@@ -84,7 +84,7 @@ function NeuroResearch() {
           </span>
           <span className={styles.bodyContainer}>
             <Image
-              className={styles.photoContainer + " " + styles.jhmiPhoto}
+              className={styles.photoContainer}
               src="/jhmi-photo.png"
               alt="Johns Hopkins Medicine"
               style={getNewDimensions("jhmi-photo.png", isMobile)}
@@ -106,7 +106,7 @@ function NeuroResearch() {
               research at Hopkins.
             </p>
             <Image
-              className={styles.photoContainer + " " + styles.neurogenesis}
+              className={styles.photoContainer}
               src="/neurogenesis.png"
               alt="Neurogenesis"
               style={getNewDimensions("neurogenesis.png", isMobile)}
@@ -129,7 +129,7 @@ function NeuroResearch() {
               growth) and BDNF expression in the brain after treatment with ECT.
             </p>
             <Image
-              className={styles.photoContainer + " " + styles.crispr}
+              className={styles.photoContainer}
               src="/crispr.jpg"
               alt="CRISPR"
               style={getNewDimensions("crispr.jpg", isMobile)}
@@ -146,7 +146,7 @@ function NeuroResearch() {
               Transgenic Core to carry out the genome modification.
             </p>
             <Image
-              className={styles.photoContainer + " " + styles.dbs}
+              className={styles.photoContainer}
               src="/stn-dbs.png"
               alt="STN DBS"
               style={getNewDimensions("stn-dbs.png", isMobile)}
