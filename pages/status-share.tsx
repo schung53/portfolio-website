@@ -61,7 +61,9 @@ function StatusShare() {
                 Contributors:
                 <ul style={{ marginTop: "0.3vh" }}>
                   <li>Don Ta (Product, BC Cancer)</li>
-                  <li>James Chung (Development)</li>
+                  <li style={{ marginTop: "0.4vh" }}>
+                    James Chung (Development)
+                  </li>
                 </ul>
               </div>
               <div className={styles.rightSubHeader}>
@@ -157,7 +159,7 @@ function StatusShare() {
               feature requests. In 2022, I re-built the app from the ground up
               to include a UI re-design and new features such as dark mode.
             </p>
-            <span>
+            <span style={{ marginTop: isMobile ? "-1vh" : "" }}>
               <Image
                 className={styles.miniPhotoContainer}
                 src="/status-share-3.png"
@@ -185,7 +187,10 @@ function StatusShare() {
             </span>
             <p
               className={styles.paragraph}
-              style={{ marginTop: "3vh", marginBottom: "15vh" }}
+              style={{
+                marginTop: isMobile ? "1vh" : "3vh",
+                marginBottom: "15vh",
+              }}
             >
               Special care was taken to ensure that the design is fully
               responsive for all device types. The department staff are often on
