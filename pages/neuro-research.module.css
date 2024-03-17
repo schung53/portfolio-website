@@ -30,11 +30,11 @@
 }
 
 .paragraph {
-  width: 40vw;
+  width: 45vw;
 }
 
 .photoContainer {
-  width: 40vw;
+  width: 45vw;
   border: solid;
   border-radius: 2vh;
   border-width: 0.4vh;
@@ -42,22 +42,22 @@
 }
 
 .jhmiPhoto {
-  height: 26.7vw;
+  height: 30vw;
   margin-top: 2vh;
 }
 
 .neurogenesis {
-  height: 16.8vw;
+  height: 18.9vw;
   margin-top: 2vh;
 }
 
 .crispr {
-  height: 22.5vw;
+  height: 25.3vw;
   margin-top: 2vh;
 }
 
 .dbs {
-  height: 20.6vw;
+  height: 23.2vw;
   margin-top: 2vh;
 }
 
