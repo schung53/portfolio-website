@@ -129,7 +129,10 @@ function BcsLogo() {
               className={styles.photoContainer}
               src="/bcs-sweater.png"
               alt="BCS Sweater"
-              style={getNewDimensions("bcs-sweater.png", isMobile)}
+              style={{
+                ...getNewDimensions("bcs-sweater.png", isMobile),
+                marginTop: "4vh",
+              }}
               width={getWidth("bcs-sweater.png")}
               height={getHeight("bcs-sweater.png")}
             />
@@ -137,7 +140,10 @@ function BcsLogo() {
               className={styles.photoContainer}
               src="/bcs-hacks.png"
               alt="BCS Hacks"
-              style={getNewDimensions("bcs-hacks.png", isMobile)}
+              style={{
+                ...getNewDimensions("bcs-hacks.png", isMobile),
+                marginTop: "4vh",
+              }}
               width={getWidth("bcs-hacks.png")}
               height={getHeight("bcs-hacks.png")}
             />
