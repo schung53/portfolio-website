@@ -171,7 +171,10 @@ function NeuroResearch() {
               Chang, A., Vaidya, P., Retzbach, E., <b>Chung, S.</b> et al. Narp
               Mediates Antidepressant-Like Effects of Electroconvulsive
               Seizures. <i>Neuropsychopharmacology</i> <b>43</b>, 1088–1098
-              (2018). <a style={{ color: "blue" }}>[<i>Nature</i>]</a>
+              (2018).{" "}
+              <a style={{ color: "blue", textDecoration: "underline" }}>
+                <i>Nature</i>
+              </a>
             </p>
             <p
               className={styles.paragraph}
@@ -182,7 +185,9 @@ function NeuroResearch() {
               Stimulation at the Subthalamic Nucleus Suppresses Excessive
               Self-Grooming in Autism-Like Mouse Models.{" "}
               <i>Neuropsychopharmacology</i> <b>41</b>, 1813–1821 (2016).{" "}
-              <a style={{ color: "blue" }}>[<i>Nature</i>]</a>
+              <a style={{ color: "blue", textDecoration: "underline" }}>
+                <i>Nature</i>
+              </a>
             </p>
             <div style={{ height: "15vh" }} />
           </span>
