@@ -1,4 +1,3 @@
-
 export enum MediaType {
   Desktop,
   Tablet,

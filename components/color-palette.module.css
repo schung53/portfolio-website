@@ -6,7 +6,7 @@
   z-index: 1;
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
   .container {
     right: 7vw;
   }

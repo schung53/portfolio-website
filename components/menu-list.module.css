@@ -1,5 +1,5 @@
 .listContainer {
-  font-family: 'Lovelo';
+  font-family: "Lovelo";
   font-size: 2.75vh;
   width: 10vw;
   height: 30vh;
@@ -9,7 +9,7 @@
   margin-top: 2vh;
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
   .listContainer {
     left: 1vh;
   }
@@ -17,7 +17,7 @@
 
 @media (max-width: 700px) {
   .listContainer {
-    font-family: 'Lovelo';
+    font-family: "Lovelo";
     font-size: 2.75vh;
     width: 10vw;
     position: absolute;
@@ -47,5 +47,5 @@
   height: 6vh;
   display: flex;
   align-items: center;
-  color: transparent
+  color: transparent;
 }

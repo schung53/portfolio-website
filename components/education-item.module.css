@@ -5,7 +5,7 @@
   border-width: 0.8vh;
   border-radius: 3vh;
   border-color: #000000;
-  font-family: 'Lovelo';
+  font-family: "Lovelo";
   font-size: 5vh;
   margin-top: 4vh;
   cursor: pointer;
@@ -25,7 +25,7 @@
     border-style: solid;
     border-width: 0.7vh;
     border-radius: 2vh;
-    font-family: 'Lovelo';
+    font-family: "Lovelo";
     font-size: 5vh;
     margin-top: 3vh;
   }
@@ -51,7 +51,7 @@
   align-items: center;
   min-width: 17.5vw;
   height: 5.4vh;
-  background-color: #FAFAF3;
+  background-color: #fafaf3;
 }
 
 .degreeContainer {
@@ -74,7 +74,7 @@
   border-color: black;
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
   .itemContainer {
     width: 65vw;
   }
@@ -243,7 +243,7 @@
   }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1200px)  {
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
   .course {
     width: 25vw;
   }
