@@ -10,6 +10,11 @@ const PHOTO_DIMENSIONS: Map<string, number[]> = new Map([
   ["status-share-3.png", [391, 791]],
   ["status-share-4.png", [391, 791]],
   ["status-share-5.png", [391, 791]],
+  ["bcs-logo-wide.png", [1895, 888]],
+  ["design-brief.png", [935, 524]],
+  ["bcs-site.png", [1474, 915]],
+  ["bcs-sweater.png", [632, 470]],
+  ["bcs-hacks.png", [1342, 694]],
 ]);
 
 const DESKTOP_WIDTH_SCALE = 45;
