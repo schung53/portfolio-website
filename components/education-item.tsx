@@ -12,7 +12,7 @@ function EducationItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000");
   const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
-  const isMobile = window.matchMedia("(max-width: 600px)").matches;
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
 
   useEffect(() => {
     if (WHITE_TEXT_THEMES.includes(color)) {

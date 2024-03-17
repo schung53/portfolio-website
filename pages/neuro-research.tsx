@@ -2,6 +2,9 @@ import ScrollToTop from "@/components/scroll-to-top";
 import styles from "./neuro-research.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { getWidth, getHeight, getNewDimensions } from "@/utils/dimension";
+import { useEffect, useState } from "react";
+import { MediaType } from "@/components/enum";
 
 const GOOGLE_SCHOLAR_URL =
   "https://scholar.google.com/citations?hl=en&user=fZUV7CMAAAAJ";
@@ -9,6 +12,27 @@ const ECS_PAPER_URL = "https://www.nature.com/articles/npp2017252";
 const DBS_PAPER_URL = "https://www.nature.com/articles/npp2015350";
 
 function NeuroResearch() {
+  const [mediaType, setMediaType] = useState(MediaType.Desktop);
+  const isMobile = mediaType === MediaType.Mobile;
+
+  useEffect(() => {
+    updateMedia();
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
+  const updateMedia = () => {
+    if (window.innerWidth > 1200) {
+      setMediaType(MediaType.Desktop);
+      return;
+    }
+    if (window.innerWidth > 700) {
+      setMediaType(MediaType.Tablet);
+      return;
+    }
+    setMediaType(MediaType.Mobile);
+  };
+
   const handleLinkClick = (link: string) => {
     window.open(link, "_blank", "noreferrer");
   };
@@ -63,8 +87,9 @@ function NeuroResearch() {
               className={styles.photoContainer + " " + styles.jhmiPhoto}
               src="/jhmi-photo.png"
               alt="Johns Hopkins Medicine"
-              width={1400}
-              height={933}
+              style={getNewDimensions("jhmi-photo.png", isMobile)}
+              width={getWidth("jhmi-photo.png")}
+              height={getHeight("jhmi-photo.png")}
             />
             <p className={styles.paragraph} style={{ marginTop: "3vh" }}>
               Before I entered the tech industry, I studied chemistry and had
@@ -84,8 +109,9 @@ function NeuroResearch() {
               className={styles.photoContainer + " " + styles.neurogenesis}
               src="/neurogenesis.png"
               alt="Neurogenesis"
-              width={984}
-              height={413}
+              style={getNewDimensions("neurogenesis.png", isMobile)}
+              width={getWidth("neurogenesis.png")}
+              height={getHeight("neurogenesis.png")}
             />
             <p className={styles.paragraph} style={{ marginTop: "3vh" }}>
               Our work focused on the neuronal basis and efficacy of brain
@@ -106,8 +132,9 @@ function NeuroResearch() {
               className={styles.photoContainer + " " + styles.crispr}
               src="/crispr.jpg"
               alt="CRISPR"
-              width={1921}
-              height={1081}
+              style={getNewDimensions("crispr.jpg", isMobile)}
+              width={getWidth("crispr.jpg")}
+              height={getHeight("crispr.jpg")}
             />
             <p className={styles.paragraph} style={{ marginTop: "3vh" }}>
               I also worked on creating a new mouse model using CRISPR, a modern
@@ -122,8 +149,9 @@ function NeuroResearch() {
               className={styles.photoContainer + " " + styles.dbs}
               src="/stn-dbs.png"
               alt="STN DBS"
-              width={978}
-              height={504}
+              style={getNewDimensions("stn-dbs.png", isMobile)}
+              width={getWidth("stn-dbs.png")}
+              height={getHeight("stn-dbs.png")}
             />
             <p className={styles.paragraph} style={{ marginTop: "3vh" }}>
               Another area of research was deep brain stimulation (DBS) for the
@@ -156,8 +184,7 @@ function NeuroResearch() {
               <i>Neuropsychopharmacology</i> <b>41</b>, 1813–1821 (2016).{" "}
               <a style={{ color: "blue" }}>[<i>Nature</i>]</a>
             </p>
-
-            <div style={{ height: "10vh" }} />
+            <div style={{ height: "15vh" }} />
           </span>
         </div>
       </main>

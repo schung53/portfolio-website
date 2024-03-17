@@ -13,7 +13,7 @@ export const getLogoFile = (color: ThemeColor) => {
     case ThemeColor.Brown:
       return "/name-logo-brown.svg";
     case ThemeColor.Rose:
-      return"/name-logo-rose.svg";
+      return "/name-logo-rose.svg";
     default:
       return "/name-logo-dark-blue.svg";
   }

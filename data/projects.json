@@ -9,15 +9,6 @@
     "route": "/status-share"
   },
   {
-    "title": "Logo for the BCS Program at UBC",
-    "date": "2021",
-    "type": "Design Competition",
-    "description": "Designed the logo selected for the post-baccalaureate computer science program (BCS) at the University of British Columbia.",
-    "image": "/bcs-logo.png",
-    "dimensions": [94, 80],
-    "route": "/bcs-logo"
-  },
-  {
     "title": "Published Neuroscience Research",
     "date": "2014 - 2017",
     "type": "Academia",
@@ -25,5 +16,14 @@
     "image": "/jhmi-logo.png",
     "dimensions": [97, 70],
     "route": "/neuro-research"
+  },
+  {
+    "title": "Logo for the BCS Program at UBC",
+    "date": "2021",
+    "type": "Design Competition",
+    "description": "Designed the logo selected for the post-baccalaureate computer science program (BCS) at the University of British Columbia.",
+    "image": "/bcs-logo.png",
+    "dimensions": [94, 80],
+    "route": "/bcs-logo"
   }
 ]
