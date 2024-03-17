@@ -5,6 +5,9 @@ const PHOTO_DIMENSIONS: Map<string, number[]> = new Map([
   ["stn-dbs.png", [978, 504]],
 ]);
 
+const DESKTOP_WIDTH_SCALE = 45;
+const MOBILE_WIDTH_SCALE = 80;
+
 const getDimension = (photo: string, index: number): number => {
   if (PHOTO_DIMENSIONS.get(photo)) {
     const dimensions = PHOTO_DIMENSIONS.get(photo);
@@ -23,17 +26,17 @@ export const getHeight = (photo: string): number => {
 
 const getNewWidth = (isMobile: boolean): string => {
   if (isMobile) {
-    return "75vw";
+    return `${MOBILE_WIDTH_SCALE}vw`;
   }
-  return "45vw";
+  return `${DESKTOP_WIDTH_SCALE}vw`;
 };
 
 const getNewHeight = (photo: string, isMobile: boolean): string => {
   const width = getWidth(photo);
   const height = getHeight(photo);
-  let newWidth = 45;
+  let newWidth = DESKTOP_WIDTH_SCALE;
   if (isMobile) {
-    newWidth = 75;
+    newWidth = MOBILE_WIDTH_SCALE;
   }
   const newHeight = (height / width) * newWidth;
   return `${newHeight}vw`;
