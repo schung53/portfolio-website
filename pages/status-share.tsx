@@ -109,6 +109,14 @@ function StatusShare() {
               radiation therapy. As such, I wanted to make this as robust and
               “production-grade” as possible. Some important features include:
             </p>
+            <ul style={{ marginTop: "0.3vh" }}>
+              <li>Real-time updates</li>
+              <li>Fully responsive design</li>
+              <li>Authentication & authorization</li>
+              <li>User roles & permissions</li>
+              <li>Persistent login</li>
+              <li>Dark mode</li>
+            </ul>
             <Image
               className={styles.photoContainer}
               src="/status-share-diagram.png"
