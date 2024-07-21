@@ -115,10 +115,21 @@
   font-size: 2.5vh;
 }
 
+.degreeNote {
+  margin-top: -2vh;
+  font-size: 2vh;
+}
+
 @media (max-width: 700px) {
   .degree {
     margin-top: 0;
     font-size: 2vh;
+  }
+
+  .degreeNote {
+    margin-top: -1.4vh;
+    margin-bottom: 2vh;
+    font-size: 1.5vh;
   }
 }
 

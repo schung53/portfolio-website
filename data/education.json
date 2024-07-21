@@ -4,6 +4,7 @@
     "university": "University of British Columbia",
     "degreeShorthand": "B.C.S.",
     "degree": "Bachelor of Computer Science",
+    "degreeNote": "Post-Baccalaureate",
     "date": "2019 - 2023",
     "location": "Vancouver, BC",
     "coursework": [
@@ -27,6 +28,7 @@
     "university": "Johns Hopkins University",
     "degreeShorthand": "B.A.",
     "degree": "Bachelor of Arts in Chemistry",
+    "degreeNote": null,
     "date": "2013 - 2017",
     "location": "Baltimore, MD",
     "coursework": [

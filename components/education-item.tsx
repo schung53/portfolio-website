@@ -121,6 +121,9 @@ function EducationItem({ item, mediaType, color }: any) {
               <p className={styles.university}>{item.university}</p>
             )}
             <p className={styles.degree}>{item.degree}</p>
+            {item.degreeNote && (
+              <p className={styles.degreeNote}>{item.degreeNote}</p>
+            )}
             <div className={styles.infoLine}>
               <p>{item.date}</p>
               <div className={styles.dashedLine} />
