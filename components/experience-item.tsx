@@ -51,14 +51,16 @@ function ExperienceItem({ item, mediaType, color }: any) {
                 height={item.dimensions[1] * 1.1}
               />
             </div>
-            <p className={styles.title}>{`${item.title} • ${item.company}`}</p>
-            <Image
-              className={styles.linkIcon}
-              src={iconFile}
-              alt="Link out"
-              width={20}
-              height={20}
-            />
+            <p className={styles.title}>
+              {`${item.title} • ${item.company}`}&nbsp;
+              <Image
+                className={styles.linkIcon}
+                src={iconFile}
+                alt="Link out"
+                width={20}
+                height={20}
+              />
+            </p>
           </span>
         ) : (
           <span className={styles.titleLine}>
@@ -73,14 +75,16 @@ function ExperienceItem({ item, mediaType, color }: any) {
             <div>
               <p className={styles.title}>{item.title}</p>
               <div className={styles.companyLine}>
-                <p className={styles.title}>{item.company}</p>
-                <Image
-                  className={styles.linkIcon}
-                  src={iconFile}
-                  alt="Link out"
-                  width={10}
-                  height={10}
-                />
+                <p className={styles.title}>
+                  {item.company}&nbsp;
+                  <Image
+                    className={styles.linkIcon}
+                    src={iconFile}
+                    alt="Link out"
+                    width={10}
+                    height={10}
+                  />
+                </p>
               </div>
             </div>
           </span>

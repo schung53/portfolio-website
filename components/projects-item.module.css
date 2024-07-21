@@ -17,7 +17,7 @@
 }
 
 .textContainer {
-  max-width: 60%;
+  max-width: 65%;
 }
 
 .title {
@@ -48,6 +48,17 @@
   align-items: center;
 }
 
+.linkIcon {
+  margin-top: 1vh;
+  margin-left: 0.3vw;
+  transition: transform 0.2s ease-in-out;
+}
+
+.titleLine {
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 700px) {
   .title {
     font-size: 3vh;
@@ -64,6 +75,10 @@
 
   .itemContainer:hover {
     transform: translate(5px, -5px);
+  }
+
+  .linkIcon {
+    margin-top: 1vh;
   }
 }
 
@@ -116,6 +131,22 @@
   .description {
     font-size: 1.7vh;
     margin-top: 1vh;
+  }
+
+  .linkIcon {
+    margin-top: 0.5vh;
+    margin-bottom: -0.2vh;
+  }
+
+  .titleLine {
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    margin-top: 1vh;
+  }
+
+  .itemContainer:hover .linkIcon {
+    transform: translate(4px, -4px);
   }
 }
 

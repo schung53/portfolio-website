@@ -7,12 +7,15 @@ import { MediaType } from "./enum";
 function ProjectsItem({ item, mediaType, color }: any) {
   const [textColor, setTextColor] = useState("#000000");
   const [holePunchDiameter, setHolePunchDiameter] = useState("");
+  const [iconFile, setIconFile] = useState("/link-out-icon.svg");
 
   useEffect(() => {
     if (WHITE_TEXT_THEMES.includes(color)) {
       setTextColor("#FADFB5");
+      setIconFile("/link-out-icon-light.svg");
     } else {
       setTextColor("#000000");
+      setIconFile("/link-out-icon.svg");
     }
   }, [color]);
 
@@ -75,7 +78,16 @@ function ProjectsItem({ item, mediaType, color }: any) {
         {mediaType === MediaType.Mobile && (
           <div className={styles.mobileTitleContainer}>
             <span>
-              <p className={styles.title}>{item.title}</p>
+              <p className={styles.title}>
+                {item.title}&nbsp;
+                <Image
+                  className={styles.linkIcon}
+                  src={iconFile}
+                  alt="Link out"
+                  width={10}
+                  height={10}
+                />
+              </p>
             </span>
             <span>
               <p className={styles.subtitle}>{`${item.date} • ${item.type}`}</p>
@@ -87,7 +99,16 @@ function ProjectsItem({ item, mediaType, color }: any) {
         {mediaType !== MediaType.Mobile && (
           <>
             <span>
-              <p className={styles.title}>{item.title}</p>
+              <p className={styles.title}>
+                {item.title}&nbsp;
+                <Image
+                  className={styles.linkIcon}
+                  src={iconFile}
+                  alt="Link out"
+                  width={20}
+                  height={20}
+                />
+              </p>
             </span>
             <span>
               <p className={styles.subtitle}>{`${item.date} • ${item.type}`}</p>
