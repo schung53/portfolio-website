@@ -146,7 +146,7 @@
   }
 
   .itemContainer:hover .linkIcon {
-    transform: translate(4px, -4px);
+    transform: translate(3px, -3px);
   }
 }
 
